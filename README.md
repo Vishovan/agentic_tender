@@ -13,7 +13,7 @@ pip install -e ".[dev]"
 pytest
 
 python -m tenderai run \
-  --dataset ../test_case_TenderAI/dataset_zakupki \
+  --dataset dataset_zakupki \
   --out runs/baseline \
   --tenders 0128200000125006876,0373200087824002359
 ```

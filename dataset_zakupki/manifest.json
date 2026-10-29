@@ -1,0 +1,547 @@
+{
+  "tenders_order": [
+    "0321200014126000201",
+    "0373200087824002359",
+    "32514576235",
+    "0128200000125006876",
+    "0119200000124020697",
+    "0319200068624000142",
+    "0372100048826000117",
+    "0337100018826000257",
+    "0356300059125000001",
+    "0308300014226000025"
+  ],
+  "files": [
+    {
+      "path": "tenders/01_0321200014126000201/01_НМЦК - 1 475 974,91.xlsx",
+      "sha256": "f71f8eee50cfa045d252384c744c20290d01333cf0bee8addcd48b44d389a7c5",
+      "bytes": 25335,
+      "detected_format": "xlsx",
+      "source_filename": "НМЦК - 1 475 974,91-f71f8eee50cf.xlsx"
+    },
+    {
+      "path": "tenders/01_0321200014126000201/02_Проект контракта.docx",
+      "sha256": "c9061bf336ce67ce360240ae58e7d813928b4faaae05eb410e98ea88260ef3cc",
+      "bytes": 56726,
+      "detected_format": "docx",
+      "source_filename": "Проект контракта-c9061bf336ce.docx"
+    },
+    {
+      "path": "tenders/01_0321200014126000201/03_Описание.docx",
+      "sha256": "419fe53aa06028bffe8816a85dc57906206305cb075c1b16e0d1b0406f5be186",
+      "bytes": 36581,
+      "detected_format": "docx",
+      "source_filename": "Описание-419fe53aa060.docx"
+    },
+    {
+      "path": "tenders/01_0321200014126000201/04_Проект извещения+состав заявки.doc",
+      "sha256": "60c5da02b393e8234aa4e5c975eab77536f5b95a7c3167bd46126b63c516d0ef",
+      "bytes": 174790,
+      "detected_format": "doc",
+      "source_filename": "Проект извещения+состав заявки-60c5da02b393.doc"
+    },
+    {
+      "path": "tenders/01_0321200014126000201/05_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "610ab493cbe86d65c7f95f1ce591510513ec53e0edf1f4ec629f17307b40a8f9",
+      "bytes": 10457,
+      "detected_format": "docx",
+      "source_filename": "Электронный документ, полученный из внешней системы-610ab493cbe8.docx"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/01_НЦЕ.xlsx",
+      "sha256": "1cee2a490158d210362cd7beb24f61a3647fe7deb9a544aca635a6d9f0f07b73",
+      "bytes": 18325,
+      "detected_format": "xlsx",
+      "source_filename": "НЦЕ-1cee2a490158.xlsx"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/02_Протокол НМЦК.pdf",
+      "sha256": "55c626f157bf8bb5f2f2cff2c5322133a8d2b361c9be1e26b8b20d33927a02dd",
+      "bytes": 260628,
+      "detected_format": "pdf",
+      "source_filename": "Протокол НМЦК-55c626f157bf.pdf"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/03_Обоснование НМЦК.pdf",
+      "sha256": "65be31bfec457d071416ca736cda2d3ed842b8cd83bf4adbc2312d9e30bcc3c4",
+      "bytes": 168041,
+      "detected_format": "pdf",
+      "source_filename": "Обоснование НМЦК-65be31bfec45.pdf"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/04_Проект_контракта_16568494-1.pdf",
+      "sha256": "3b6fab233ac513d3246fdd1d5d5b852229c064ae43bc6683c524f854be833697",
+      "bytes": 103175,
+      "detected_format": "pdf",
+      "source_filename": "Проект_контракта_16568494-1-3b6fab233ac5.pdf"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "sha256": "234ead76494612b6a91e337540bde1b9ff2e6d5a0c4dcf23406cf918e46db97c",
+      "bytes": 73701,
+      "detected_format": "pdf",
+      "source_filename": "Техническое_задание_16568494-1-234ead764946.pdf"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/06_ElectronicAuction14588723.pdf",
+      "sha256": "39bae299a42c83ece07c4094ec530e2dc17f1b321e36764cc854e630bcd94d55",
+      "bytes": 95783,
+      "detected_format": "pdf",
+      "source_filename": "ElectronicAuction14588723-39bae299a42c.pdf"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/07_!! В_помощь_участникам_закупок.pdf",
+      "sha256": "2edcfd9c29074d23751b53aea088488cf7ba6cacb81468368d9cf7ad496ef01d",
+      "bytes": 151808,
+      "detected_format": "pdf",
+      "source_filename": "!! В_помощь_участникам_закупок-2edcfd9c2907.pdf"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/08_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "fb8130fb395e3ac56d3a65d212c4a56db7215a8b0177315b7f2ecf55f8fecf81",
+      "bytes": 10641,
+      "detected_format": "docx",
+      "source_filename": "Электронный документ, полученный из внешней системы-fb8130fb395e.docx"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/09_Электронный документ, полученный из внешней системы.docx",
+      "sha256": "c211a85e4808e0e86890c6b18d5bd4f528e9c894c343f7572792818db94659db",
+      "bytes": 141,
+      "detected_format": "error_json",
+      "source_filename": "Электронный документ, полученный из внешней системы-c211a85e4808.docx"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/10_signature_text_1735145999_summingup_522860.txt",
+      "sha256": "c71ea300c154ef7b1db808a65f52c42de99b96625f1104c4c5afc1c822071ff6",
+      "bytes": 2028,
+      "detected_format": "txt",
+      "source_filename": "signature_text_1735145999_summingup_522860-c71ea300c154.txt"
+    },
+    {
+      "path": "tenders/02_0373200087824002359/11_0373200087824002359 Протокол подведения итогов (ЭП).docx",
+      "sha256": "f4cbe1fa6ce260b7ef381ca56402ee4ebbd273c7da63288e70c3097cd6aadf56",
+      "bytes": 11048,
+      "detected_format": "docx",
+      "source_filename": "0373200087824002359 Протокол подведения итогов (ЭП)-f4cbe1fa6ce2.docx"
+    },
+    {
+      "path": "tenders/03_32514576235/01_Извещение.xml",
+      "sha256": "d1ec88d301ef6db52b7f7d42b8055fd747153ea5fc3673e83a906f51c3d3f969",
+      "bytes": 669696,
+      "detected_format": "doc",
+      "source_filename": "785b777a2c4e6144400103403ddd185e12f450fbe83d3f600301637d1e37709e.doc"
+    },
+    {
+      "path": "tenders/03_32514576235/02_Протокол_подведения_итогов_аукциона_.docx",
+      "sha256": "0be3510fa6619f2b2f805fd2141dcb727f3c6690f472a08677555a00f32d0284",
+      "bytes": 20720,
+      "detected_format": "docx",
+      "source_filename": "d879aee9cc7455765fd3155e3211eb3a863d00bd735dd3af4cfa1c6fba1ab5e3.docx"
+    },
+    {
+      "path": "tenders/03_32514576235/03_Протокол_рассмотрения_первых_частей_заявок_.docx",
+      "sha256": "8ce8283cae3beac8321c8e8288d46878cc2f4957e325f2f2ad954fc3e9a8e303",
+      "bytes": 20637,
+      "detected_format": "docx",
+      "source_filename": "e38e3f716504d4c1ba9b2710adbd9a2e8246fc3dfa33fdc820974eb63d29243f.docx"
+    },
+    {
+      "path": "tenders/03_32514576235/04_Протокол_рассмотрения_вторых_частей_заявок_аукциона_.docx",
+      "sha256": "de9dcdbbefdef037d3b0c4ed4bcd66a05531099ff4ca176c2d57b3f8f8a2ef5d",
+      "bytes": 23207,
+      "detected_format": "docx",
+      "source_filename": "f4a32fe7b674f46c9ddaec25c8463c41b2d8f386de252a7ccb6373b85630da6e.docx"
+    },
+    {
+      "path": "tenders/03_32514576235/05_Извещение.xml",
+      "sha256": "53e6c0ce5c0f88d89bb673304c638e6af8c3af642a64b9794e2187dd862cee26",
+      "bytes": 129511,
+      "detected_format": "xml",
+      "source_filename": "Извещение.xml"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/01_Обоснование начальной (максимальной) цены контракта.xls",
+      "sha256": "e964934d0deaae07cdf10b070fa0dec7579f1b940e1bdcb2454d8fa393089dc6",
+      "bytes": 94208,
+      "detected_format": "xls",
+      "source_filename": "0025_e964934d0deaae07cdf10b070fa0dec7579f1b940e1bdcb2454d8fa393089dc6.xls"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/02_Обоснование начальной (максимальной) цены контракта.docx",
+      "sha256": "e385ff5a4a9d9c38083d5e22a48105c910a3a1c7bc075bd6e8e64c8990e01c0c",
+      "bytes": 14709,
+      "detected_format": "docx",
+      "source_filename": "0026_e385ff5a4a9d9c38083d5e22a48105c910a3a1c7bc075bd6e8e64c8990e01c0c.docx"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/03_Проект государственного контракта.docx",
+      "sha256": "60295adb2c181f710aca7cd534daa5ec7561f219862f12bccb757bb408516803",
+      "bytes": 50738,
+      "detected_format": "docx",
+      "source_filename": "0027_60295adb2c181f710aca7cd534daa5ec7561f219862f12bccb757bb408516803.docx"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/04_Описание объекта закупки.xlsx",
+      "sha256": "d4fa1090fb464c70964b0142ede7934816de8a75025d13a79d57b3c71d47c567",
+      "bytes": 11722,
+      "detected_format": "xlsx",
+      "source_filename": "0028_d4fa1090fb464c70964b0142ede7934816de8a75025d13a79d57b3c71d47c567.xlsx"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/05_Требования к содержанию и составу заявки на участие.docx",
+      "sha256": "0d73fc0e20b5d8e6198b47594e9fb78a928b1725613b590848af978c50495d62",
+      "bytes": 45415,
+      "detected_format": "docx",
+      "source_filename": "0029_0d73fc0e20b5d8e6198b47594e9fb78a928b1725613b590848af978c50495d62.docx"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/06_Другое..",
+      "sha256": "51ad3783d22e6dda91b316286641a9ec7432e350266866e68a295fd34d58216d",
+      "bytes": 170194,
+      "detected_format": "pdf",
+      "source_filename": "0030_51ad3783d22e6dda91b316286641a9ec7432e350266866e68a295fd34d58216d.pdf"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/07_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "da3e48d37d92e6754f5604d9905405fc24a461b79ddaae1739ee59affde735e9",
+      "bytes": 2704,
+      "detected_format": "xml",
+      "source_filename": "0031_da3e48d37d92e6754f5604d9905405fc24a461b79ddaae1739ee59affde735e9.xml"
+    },
+    {
+      "path": "tenders/04_0128200000125006876/08_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "07184d8a15f6fcb459e4c5931ce4aabddbb60a62111103acbeabf81e9cdfed68",
+      "bytes": 64954,
+      "detected_format": "xml",
+      "source_filename": "0032_07184d8a15f6fcb459e4c5931ce4aabddbb60a62111103acbeabf81e9cdfed68.xml"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/01_3. Обоснование НМЦК.xlsx",
+      "sha256": "92928d313774123c9a39b3230db07ff3f3b48b300d33cd979336e01eaf228423",
+      "bytes": 31551,
+      "detected_format": "xlsx",
+      "source_filename": "3. Обоснование НМЦК-92928d313774.xlsx"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/02_5. пк.rar",
+      "sha256": "4630506f715174527e05a458b3acaddf8038435a6a1d2179e1d22bac513c1e80",
+      "bytes": 46150,
+      "detected_format": "rar",
+      "source_filename": "5. пк-4630506f7151.rar"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/03_2. Описание объекта закупки (заявка) - 2024-11-19T163120.456.docx",
+      "sha256": "28810c178569225b7cbbc100c7c4ab843184b10b5acbd28cfe9c5cc37e6c4c12",
+      "bytes": 28963,
+      "detected_format": "docx",
+      "source_filename": "2. Описание объекта закупки (заявка) - 2024-11-19T163120.456-28810c178569.docx"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/04_1. Требование к составу заявки товар - 2024-11-13T110901.260.docx",
+      "sha256": "0316e18e68971673ce5107125b1d4887bdb255990fe29a1c061cacc131298232",
+      "bytes": 18568,
+      "detected_format": "docx",
+      "source_filename": "1. Требование к составу заявки товар - 2024-11-13T110901.260-0316e18e6897.docx"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/05_4. Инструкция ТОВАР.doc",
+      "sha256": "40b21277ac2fa834016f39e7efc1f53486787b112e00926d67cd1c69fb8d73f0",
+      "bytes": 59392,
+      "detected_format": "doc",
+      "source_filename": "4. Инструкция ТОВАР-40b21277ac2f.doc"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/06_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "16b2ee68848dad3649b0c467d4cefea73536436ed06ea0ffa785c9a0fd3f376d",
+      "bytes": 119210,
+      "detected_format": "pdf",
+      "source_filename": "Электронный документ, полученный из внешней системы-16b2ee68848d.pdf"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/07_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "bb878b9b21e0bdab17fa6fbe8378fc910ae0d182968b6e54233edc772276c338",
+      "bytes": 25259,
+      "detected_format": "docx",
+      "source_filename": "Электронный документ, полученный из внешней системы-bb878b9b21e0.docx"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/08_Электронный документ, полученный из внешней системы.docx",
+      "sha256": "33ac1745fcf86106a56e025d682d2337cfd3c0d06816b3cd13fdc3cd8e71193f",
+      "bytes": 141,
+      "detected_format": "error_json",
+      "source_filename": "Электронный документ, полученный из внешней системы-33ac1745fcf8.docx"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/01_обоснование НМЦК2.xls",
+      "sha256": "ac94d6054b6ef3fd2bf313a141c1e7b32323822c50733e1bc585f5ced528ac14",
+      "bytes": 15360,
+      "detected_format": "xls",
+      "source_filename": "обоснование НМЦК2-ac94d6054b6e.xls"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/02_Проект контракта.docx",
+      "sha256": "f6a4481d2ace0a6438edf211cb5f6e6878351dcb548c0595a8810ca59a25e06a",
+      "bytes": 34037,
+      "detected_format": "docx",
+      "source_filename": "Проект контракта-f6a4481d2ace.docx"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "sha256": "e9878ce8c5a33a8a4c5e5a6b3d30a10d579ba85645441a77cdd77bb78682ca34",
+      "bytes": 43520,
+      "detected_format": "doc",
+      "source_filename": "Описание объекта закупки-e9878ce8c5a3.doc"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/04_Требование (Приложение 4).docx",
+      "sha256": "c1761784252fd3a8d9ec589ed30cdf41acdcd1b2e5da9cd683115aed072747d8",
+      "bytes": 14855,
+      "detected_format": "docx",
+      "source_filename": "Требование (Приложение 4)-c1761784252f.docx"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/05_Инструкция (Приложение 3).doc",
+      "sha256": "751acf79fc21d2face25dd9da62afe65ef5d3200c6df61131d5960125b939811",
+      "bytes": 59904,
+      "detected_format": "doc",
+      "source_filename": "Инструкция (Приложение 3)-751acf79fc21.doc"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/06_Описание объекта закупки.doc",
+      "sha256": "c8431a93d1323e5591ce7aa5202be8db179b9300104a839c1fe20042e5336c44",
+      "bytes": 44032,
+      "detected_format": "doc",
+      "source_filename": "Описание объекта закупки-c8431a93d132.doc"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/07_Ответ на запрос.doc",
+      "sha256": "61cf32b11dae63a2cef81ce97fdd086ff2f4d37702ff3e398af564fb043a5cd2",
+      "bytes": 14336,
+      "detected_format": "doc",
+      "source_filename": "Ответ на запрос-61cf32b11dae.doc"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/08_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "f8f6a584443018ca586a91a82054d74b6af7303a39ffb5b288f9cbea96cc330a",
+      "bytes": 19968,
+      "detected_format": "doc",
+      "source_filename": "Электронный документ, полученный из внешней системы-f8f6a5844430.doc"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/09_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "80e3063b3a4a7db9a7d0b035299a26a932c989466d10590e798a44ea5ad060cf",
+      "bytes": 116224,
+      "detected_format": "doc",
+      "source_filename": "Электронный документ, полученный из внешней системы-80e3063b3a4a.doc"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/10_Электронный документ, полученный из внешней системы.xml",
+      "sha256": "5c9673b42837bd8c1480cbfa1367472defae3dbb1e142994797570f926fce09f",
+      "bytes": 141,
+      "detected_format": "error_json",
+      "source_filename": "Электронный документ, полученный из внешней системы.xml-5c9673b42837.bin"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/11_Протокол 0319200068624000142.docx",
+      "sha256": "b81fc440e455823228052e6d295052f9171aaadf89f55e2f862d0820a05d0e8d",
+      "bytes": 13205,
+      "detected_format": "docx",
+      "source_filename": "Протокол 0319200068624000142-b81fc440e455.docx"
+    },
+    {
+      "path": "tenders/07_0372100048826000117/01_Извещение.xml",
+      "sha256": "487e74aeec84be1980be452b13061db63fab37354dc42aa5b6f164fec6d11fd8",
+      "bytes": 36352,
+      "detected_format": "xls",
+      "source_filename": "13fdacd90a94a80d660e9886adba7e0a47b6c93ab57318969f1bd2ed7514f511.xls"
+    },
+    {
+      "path": "tenders/07_0372100048826000117/02_Извещение.xml",
+      "sha256": "3284c8349f99017b154fa536291dc4eed0aa4595358d904dd81362970d89ceeb",
+      "bytes": 38257,
+      "detected_format": "docx",
+      "source_filename": "72dfb7424f0757a562ea3a554a94629a7137c43e66011ca07fe68c1301a67379.docx"
+    },
+    {
+      "path": "tenders/07_0372100048826000117/03_epProtocolEZT2020Final.docx",
+      "sha256": "dd59c617d50496ab7d980a956ba892db2de05ace321caf48bc27d55dcb5bbc6f",
+      "bytes": 24035,
+      "detected_format": "docx",
+      "source_filename": "9b971de56c275f62febf57c102a15a6d4b66c072df70808e7899367e5dd74d7e.docx"
+    },
+    {
+      "path": "tenders/07_0372100048826000117/04_Извещение.xml",
+      "sha256": "8190355260d209ec396c53c4bd674c9e972aa942a55f775afe8a8d10251ce252",
+      "bytes": 47248,
+      "detected_format": "xml",
+      "source_filename": "Извещение.xml"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/01_НМЦК_насос инфузионный.xlsx",
+      "sha256": "1db73683c81e107bbe7414f34e66a40eb5e7f2d110630f555598d88703c3eae6",
+      "bytes": 14506,
+      "detected_format": "xlsx",
+      "source_filename": "НМЦК_насос инфузионный-1db73683c81e.xlsx"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/02_Проект контракта.doc",
+      "sha256": "8ad3d6ca3bf789dcdf21e4d316910ecf7b241325b88fd524ca8ec4f576721731",
+      "bytes": 153600,
+      "detected_format": "doc",
+      "source_filename": "Проект контракта-8ad3d6ca3bf7.doc"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/03_Описание объекта закупки.xlsx",
+      "sha256": "b2e893f4c4448874cca3e143b82e03c09ad206d6b0ea5d0e2ed3cd501e0bc483",
+      "bytes": 10147,
+      "detected_format": "xlsx",
+      "source_filename": "Описание объекта закупки-b2e893f4c444.xlsx"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/04_Требования к содержанию, составу заявки.docx",
+      "sha256": "fc11dc592852c26365fc91d75ad70f244c06241036c8d2b0887ebb8df866307f",
+      "bytes": 13902,
+      "detected_format": "docx",
+      "source_filename": "Требования к содержанию, составу заявки-fc11dc592852.docx"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/05_Ответ на запрос №179344 от 30.06.2026.docx",
+      "sha256": "0456769e1ec7adec572848ee0d9ca41a77542512a0deb180bb58cf947d04de00",
+      "bytes": 11440,
+      "detected_format": "docx",
+      "source_filename": "Ответ на запрос №179344 от 30.06.2026-0456769e1ec7.docx"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/06_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "e35443b5368486e8ad0919e97dbe6d9c207e10cb2427ab23ce21bcd16b813ef5",
+      "bytes": 8812,
+      "detected_format": "docx",
+      "source_filename": "Электронный документ, полученный из внешней системы-e35443b53684.docx"
+    },
+    {
+      "path": "tenders/08_0337100018826000257/07_Электронный документ, полученный из внешней системы.pdf",
+      "sha256": "69c68b1deb59d637efcda7638f99171e5faa84b5587b4c1a2972c94f4e31974f",
+      "bytes": 10855,
+      "detected_format": "docx",
+      "source_filename": "Электронный документ, полученный из внешней системы-69c68b1deb59.docx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/01_Извещение.xml",
+      "sha256": "1a2cfafed2d6cd642e5acd1c2ebe99bacb570ea3f1923b78899d1a950a12f5c9",
+      "bytes": 7689,
+      "detected_format": "docx",
+      "source_filename": "09e6d5403d04fc80274b6c3646733a6c1b58bf1ab60724b8de57640347712e95.docx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/02_Извещение.xml",
+      "sha256": "9d2d1333b7e8cce0eddcc36e65e07a104cd9f25c892018dc6371f6acba200070",
+      "bytes": 39000,
+      "detected_format": "xlsx",
+      "source_filename": "0d8498db8b50d01bcec8149f6e490ca341319bf619b3e2c5caedc9d9780d96f6.xlsx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/03_Решение об отмене аукциона  22.01.2025.doc",
+      "sha256": "3725a774b486b344f11b721aba6c2203d08fb44f9a06afbb8c6d6b4602ce8e2d",
+      "bytes": 48128,
+      "detected_format": "doc",
+      "source_filename": "47a3b33a59dba2f29bcf4e38bebb1e08c92e9c0af6f1cc67e191b34ea25c5248.doc"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/04_Извещение.xml",
+      "sha256": "a7e9dc9b0e3aa40f7e93294f7ca18f32dbeeb06dd2d7d762d76ea49181a62b0a",
+      "bytes": 15251,
+      "detected_format": "docx",
+      "source_filename": "9b43e6e4216dcf7c7a537e319c2823d8a617b9931d7354c532781db6a871119d.docx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/05_Ответ на запрос.docx",
+      "sha256": "4189a251920eeeff7197cccaa87ca4902dc4b5f54a4bbfc982f9b3457ca7a528",
+      "bytes": 14632,
+      "detected_format": "docx",
+      "source_filename": "aa7d121fbb10328fdce4ce16e76106767e83ba6bd7067acfd4f2e89fc3983167.docx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/06_Извещение.xml",
+      "sha256": "54f9b889b446df49a2c692ea34f8659c4e33295667c4b97f61d67e92bbd54b6e",
+      "bytes": 218809,
+      "detected_format": "docx",
+      "source_filename": "b50e804c14a28633b4aeb4a82dbd87c0612e22357216be278a8feaf44d97a9dc.docx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/07_Извещение.xml",
+      "sha256": "170c2b17c29770b6ee49c7caaeaaadc03b2738fa03197b9060909c74ea86cddd",
+      "bytes": 3495,
+      "detected_format": "docx",
+      "source_filename": "f7f6736e5331a4e7f7f10eb05f6ce66cd78a755acd8e2b175097ee79738db53a.docx"
+    },
+    {
+      "path": "tenders/09_0356300059125000001/08_Извещение.xml",
+      "sha256": "b3e66af622de3f01d72fb6221f46463b0b29b22ba30b470a19bc561b42a5defb",
+      "bytes": 81425,
+      "detected_format": "xml",
+      "source_filename": "Извещение.xml"
+    },
+    {
+      "path": "tenders/10_0308300014226000025/01_Извещение.xml",
+      "sha256": "a7284f3b1b1e8b846a7b7d6ae341f3e319e08d9011b0f7ae0695a1d35f4196be",
+      "bytes": 118784,
+      "detected_format": "doc",
+      "source_filename": "b15c88bc0103210dc66a26609bcea5d200ac004cef22ed6988b0dbc99ad4f331.doc"
+    },
+    {
+      "path": "tenders/10_0308300014226000025/02_Извещение.xml",
+      "sha256": "ff52af2c38a39b0155b53bf4b60494561a7b5f5e6732b1b1b850ce8798499b93",
+      "bytes": 60928,
+      "detected_format": "xls",
+      "source_filename": "c7c4f5ab2c2fe4e9321b174dd84ba297e5b08cb9e50c32c9324cbc222d9c89fa.xls"
+    },
+    {
+      "path": "tenders/10_0308300014226000025/03_epProtocolEZT2020Final.docx",
+      "sha256": "1aada11b5cb7b12a9fe8d31696962a1f815cd0e0e469b54520aa0cbc7f45a85d",
+      "bytes": 21599,
+      "detected_format": "docx",
+      "source_filename": "c808dcb5d88b42b46be99a976c857cf0bd9844531129c567f889844ed2b52b2e.docx"
+    },
+    {
+      "path": "tenders/10_0308300014226000025/04_Извещение.xml",
+      "sha256": "3a867f816da5deecb83fa5eb347de2d29b418086c76cf02ad8fcf5fec10c9e1c",
+      "bytes": 45405,
+      "detected_format": "docx",
+      "source_filename": "d85b2aaafe9c37ff273f401c6329d4ac02f124e38bbe030a21a015cd950ced82.docx"
+    },
+    {
+      "path": "tenders/10_0308300014226000025/05_Извещение.xml",
+      "sha256": "32fcd30c43799630d685a28fa226be16dd53466d955bf79919a064269d299707",
+      "bytes": 49489,
+      "detected_format": "xml",
+      "source_filename": "Извещение.xml"
+    }
+  ],
+  "saved_error_responses": [
+    "tenders/02_0373200087824002359/09_Электронный документ, полученный из внешней системы.docx",
+    "tenders/05_0119200000124020697/08_Электронный документ, полученный из внешней системы.docx",
+    "tenders/06_0319200068624000142/10_Электронный документ, полученный из внешней системы.xml"
+  ],
+  "sku_files": [
+    {
+      "path": "SKU/CT0050L.xlsx",
+      "sha256": "223e30c5384cfb7dd9bb50abc30833103252cd275a12da38f1778e2c24b91625",
+      "characteristics": 36
+    },
+    {
+      "path": "SKU/MC1248L.xlsx",
+      "sha256": "a0ec2ca719de54bc2891081961fe9eedead0ee6fccf181bf89dac8eab89eed46",
+      "characteristics": 45
+    },
+    {
+      "path": "SKU/MS5248M.xlsx",
+      "sha256": "314eb2dd936a8eca893fde18318650ecf5e96bb24f7ef565005848478a688f77",
+      "characteristics": 51
+    },
+    {
+      "path": "SKU/M275-07.xlsx",
+      "sha256": "dbfb1c82418eee3dea519fcfb96c61efbdb2113d89c7f275e29613cfe1d0e379",
+      "characteristics": 12
+    }
+  ]
+}

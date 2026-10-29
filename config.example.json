@@ -1,5 +1,5 @@
 {
-  "dataset": "../test_case_TenderAI/dataset_zakupki",
+  "dataset": "dataset_zakupki",
   "out": "runs/baseline",
   "tenders": [],
   "llm": {
