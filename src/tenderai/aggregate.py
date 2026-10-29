@@ -15,11 +15,15 @@ def position_status(checks: list[Check]) -> tuple[str, str]:
     return "unknown", "unresolved_requirements"
 
 
-def tender_status(position_statuses: list[str], coverage_gap: bool) -> tuple[str, str]:
+def tender_status(
+    position_statuses: list[str],
+    coverage_gap: bool,
+    gap_reason: str = "coverage_gap",
+) -> tuple[str, str]:
     if any(status == "match" for status in position_statuses):
         return "match", "suitable_position"
     if coverage_gap:
-        return "unknown", "coverage_gap"
+        return "unknown", gap_reason
     if position_statuses and all(status == "mismatch" for status in position_statuses):
         return "mismatch", "all_positions_conflict"
     return "unknown", "no_confirmed_position"

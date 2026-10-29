@@ -127,7 +127,7 @@ def _docx(path: Path) -> tuple[str, list[Table]]:
             for col_index, cell in enumerate(row.cells, start=1):
                 value = " ".join(cell.text.split())
                 if value:
-                    cells.append(Cell(a1=f"T{index}R{row_index}C{col_index}", value=value))
+                    cells.append(Cell(a1=_a1(row_index, col_index), value=value))
             if cells:
                 rows.append(cells)
         if rows:

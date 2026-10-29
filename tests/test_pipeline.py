@@ -55,6 +55,30 @@ def test_unaligned_requirement_is_unknown_not_mismatch(tmp_path: Path):
     assert summary["tender_rows"][0]["reason"] == "no_confirmed_position"
 
 
+def test_docx_table_requirements_use_pokazatel_headers(tmp_path: Path):
+    import docx
+
+    dataset = tmp_path / "dataset"
+    _write_sku(dataset / "SKU" / "CT0050L.xlsx")
+    path = dataset / "tenders" / "01_0001" / "opis.docx"
+    path.parent.mkdir(parents=True)
+    document = docx.Document()
+    table = document.add_table(rows=3, cols=5)
+    header = ["№", "Наименование", "Наименование показателя", "Значение показателя", "Единица измерения показателя"]
+    for col, text in enumerate(header):
+        table.cell(0, col).text = text
+    row1 = ["1", "Насос инфузионный", "Номинальный объем резервуара", "≥ 200 и ≤ 300", "мл"]
+    row2 = ["1", "Насос инфузионный", "Болюс", "Нет", ""]
+    for col, text in enumerate(row1):
+        table.cell(1, col).text = text
+    for col, text in enumerate(row2):
+        table.cell(2, col).text = text
+    document.save(path)
+    summary = run(dataset, tmp_path / "out")
+    assert summary["requirements"] == 2
+    assert summary["tender_rows"][0]["status"] == "match"
+
+
 def test_alignment_uses_canon_before_tokens():
     requirement = Requirement(
         requirement_id="r",

@@ -11,10 +11,12 @@ from pathlib import Path
 from tenderai.aggregate import position_status, tender_status
 from tenderai.align import align
 from tenderai.checker import check_constraints
+from tenderai.eis_xml import has_characteristics, requirements_from_eis_xml
 from tenderai.extract import extract_document
 from tenderai.inventory import inventory
 from tenderai.llm import LunaConfig
 from tenderai.models import Check, UsageRecord, dump
+from tenderai.parse import fold
 from tenderai.requirements import requirements_from_document
 from tenderai.sku import load_skus
 
@@ -104,25 +106,42 @@ def run(
 
     requirements = []
     requirements_by_file: dict[str, int] = defaultdict(int)
+    seen_keys: set[tuple[str, str]] = set()
     for document in documents:
         if document.status != "ok":
             continue
-        extracted = requirements_from_document(document.record, document.tables)
-        requirements.extend(extracted)
-        requirements_by_file[document.record.path] = len(extracted)
+        raw_xml = ""
+        if document.record.detected_format == "xml":
+            raw_xml = (dataset / document.record.path).read_text(encoding="utf-8", errors="replace")
+        if raw_xml and has_characteristics(raw_xml):
+            extracted = requirements_from_eis_xml(document.record, raw_xml)
+        else:
+            extracted = requirements_from_document(document.record, document.tables)
+        kept = []
+        for requirement in extracted:
+            key = (requirement.position_id, fold(requirement.name))
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            kept.append(requirement)
+        requirements.extend(kept)
+        requirements_by_file[document.record.path] = len(kept)
 
-    gap_tenders = {
+    requirements_per_tender: dict[str, int] = defaultdict(int)
+    for requirement in requirements:
+        requirements_per_tender[requirement.tender_id] += 1
+    tenders_in_scope = {record.tender_id for record in records if record.tender_id}
+    broken_tenders = {
         document.record.tender_id
         for document in documents
-        if document.record.tender_id
-        and (
-            document.status != "ok"
-            or (
-                len(document.text) > 400
-                and requirements_by_file.get(document.record.path, 0) == 0
-            )
-        )
+        if document.status != "ok" and document.record.tender_id
     }
+    no_requirement_tenders = {
+        tender_id
+        for tender_id in tenders_in_scope
+        if requirements_per_tender.get(tender_id, 0) == 0
+    }
+    gap_tenders = broken_tenders | no_requirement_tenders
     checks: list[Check] = []
     match_started = time.perf_counter()
     for requirement in requirements:
@@ -203,9 +222,11 @@ def run(
     for tender_id in seen_tenders:
         for sku_id in sorted(by_sku):
             rows = by_tender_sku.get((tender_id, sku_id), [])
+            gap_reason = "no_requirements_found" if tender_id in no_requirement_tenders else "coverage_gap"
             status, reason = tender_status(
                 [row["status"] for row in rows],
                 coverage_gap=tender_id in gap_tenders,
+                gap_reason=gap_reason,
             )
             tender_rows.append(
                 {

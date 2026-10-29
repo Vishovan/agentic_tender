@@ -87,19 +87,25 @@ def requirements_from_document(record: FileRecord, tables: list[Table]) -> list[
 def _header(rows: list[list[Cell]]) -> tuple[int, dict[str, str]] | None:
     for index, row in enumerate(rows):
         labels = {fold(cell.value): _letters(cell.a1) for cell in row}
-        name_column = _match(labels, ("наименование характеристики",))
+        name_column = _match(
+            labels,
+            ("наименование характеристики", "наименование показателя", "характеристики с указанием"),
+        )
         if not name_column:
             continue
         if not (
-            _match(labels, ("значение характеристики", "текстовое описание"))
+            _match(labels, ("значение характеристики", "текстовое описание", "значение показателя"))
             or _match(labels, ("min",))
             or "min" in labels
         ):
             continue
         columns = {
             "name": name_column,
-            "text": _match(labels, ("значение характеристики", "текстовое описание")),
-            "unit": _match(labels, ("единица измерения характеристики", "единица измерения")),
+            "text": _match(labels, ("значение характеристики", "текстовое описание", "значение показателя")),
+            "unit": _match(
+                labels,
+                ("единица измерения характеристики", "единица измерения показателя", "единица измерения"),
+            ),
             "title": _match(labels, ("наименование товара",)),
             "number": _match_exact(labels, ("№ п/п", "№")),
             "op_low": _match(labels, (">, >=", ">=", ">")),

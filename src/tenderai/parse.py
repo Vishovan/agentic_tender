@@ -148,6 +148,22 @@ def parse_constraint(
             None,
         )
 
+    phrase = re.search(
+        r"(не более|не менее|не выше|не ниже|не превыша\w*|максимум|минимум|более|менее|свыше)\s*(-?\d+(?:[.,]\d+)?)",
+        text,
+    )
+    if phrase:
+        word = phrase.group(1)
+        number = _number(phrase.group(2))
+        if word in {"не более", "не выше", "максимум"} or word.startswith("не превыша"):
+            return _from_columns(unit_norm, knowledge, None, None, "<=", number, None)
+        if word in {"не менее", "не ниже", "минимум"}:
+            return _from_columns(unit_norm, knowledge, ">=", number, None, None, None)
+        if word in {"более", "свыше"}:
+            return _from_columns(unit_norm, knowledge, ">", number, None, None, None)
+        if word == "менее":
+            return _from_columns(unit_norm, knowledge, None, None, "<", number, None)
+
     bare = _number(text)
     if bare is not None:
         return Constraint(
