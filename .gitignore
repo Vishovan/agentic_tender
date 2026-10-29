@@ -6,5 +6,6 @@ __pycache__/
 .env
 runs/
 .cache/
+.DS_Store
 .idea/
 *.egg-info/
