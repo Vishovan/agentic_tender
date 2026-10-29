@@ -1,0 +1,2 @@
+[console_scripts]
+tenderai = tenderai.cli:main

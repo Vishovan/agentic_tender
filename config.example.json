@@ -1,0 +1,11 @@
+{
+  "dataset": "../test_case_TenderAI/dataset_zakupki",
+  "out": "runs/baseline",
+  "tenders": [],
+  "llm": {
+    "enabled": false,
+    "model": "",
+    "api_base": "",
+    "api_key_env": "TENDERAI_API_KEY"
+  }
+}
