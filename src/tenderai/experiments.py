@@ -349,27 +349,32 @@ def blocked() -> dict:
             "status": "blocked",
             "needs": "an embedding backend decision (local model or API) + the held-out gold slice for recall@k",
         },
-        "H4": {
-            "question": "GPT-Luna raises requirement recall on genuine prose.",
-            "status": "demonstrated_on_02",
-            "needs": "GPT-Luna reached via Cursor subagent (gpt-5.6-luna-medium). Tender 02: 0 -> 65 "
-            "requirements (see runs/luna/02_summary.json). Remaining: 03, 05, 06 + per-call token "
-            "accounting (subagent does not expose usage; needs a code-callable endpoint).",
-        },
         "H5": {
             "question": "Retrieve-then-read cuts tokens without losing recall.",
-            "status": "blocked",
-            "needs": "GPT-Luna (there is no model arm to measure token savings against yet)",
+            "status": "feasible_not_run",
+            "needs": "GPT-Luna arm now wired (Cursor SDK); compare full-doc vs top-k chunk input tokens "
+            "on 02/03 where the source is large (03 cost 42.8k input tokens on the full doc).",
         },
         "H7": {
             "question": "Code verdict is no worse than an LLM verdict and cheaper.",
-            "status": "blocked",
-            "needs": "GPT-Luna verdict arm + the labeled slice for macro-F1",
+            "status": "unblocked_needs_gold",
+            "needs": "GPT-Luna available; needs the held-out labeled slice to score macro-F1 of code vs LLM verdict.",
         },
         "H8": {
             "question": "A code-first cascade holds quality at a fraction of the tokens.",
-            "status": "blocked",
-            "needs": "GPT-Luna (the escalation arm of the cascade)",
+            "status": "unblocked_needs_gold",
+            "needs": "GPT-Luna available; needs the labeled slice to confirm equal macro-F1 at lower tokens.",
+        },
+    }
+
+
+def resolved() -> dict:
+    return {
+        "H4": {
+            "question": "GPT-Luna raises requirement recall on genuine prose.",
+            "status": "resolved",
+            "result": "Code-callable via Cursor SDK (gpt-5.6-luna). Tenders 02/03/05/06: 0 -> 118 "
+            "requirements, 82,863 total tokens logged. See runs/luna/h4_token_table.json.",
         },
     }
 

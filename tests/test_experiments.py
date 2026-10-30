@@ -102,5 +102,11 @@ def test_h6_rejects_reranker_for_small_sku_set():
 
 def test_blocked_hypotheses_name_their_precondition():
     blocked = ex.blocked()
-    assert set(blocked) == {"H2", "H4", "H5", "H7", "H8"}
+    assert set(blocked) == {"H2", "H5", "H7", "H8"}
     assert all("needs" in payload for payload in blocked.values())
+
+
+def test_h4_is_resolved():
+    resolved = ex.resolved()
+    assert "H4" in resolved
+    assert resolved["H4"]["status"] == "resolved"
