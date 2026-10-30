@@ -4,9 +4,10 @@
   "tenders": [],
   "llm": {
     "enabled": false,
-    "model": "gpt-5.6-luna-medium",
+    "model": "gpt-5.6-luna",
+    "model_subagent_variant": "gpt-5.6-luna-medium",
     "access": "cursor-sdk",
     "api_key_env": "CURSOR_API_KEY",
-    "note": "Code-callable GPT-Luna via the Cursor SDK (pip install cursor-sdk; scripts/luna_sdk_extract.py). RunResult.usage gives input/output/cached/reasoning tokens for the token table. Mint CURSOR_API_KEY at Cursor dashboard -> Integrations. Model id must stay gpt-5.6-luna-medium per TASK.md. (A manual Cursor-subagent path also exists for ad-hoc runs: scripts/luna_match.py.)"
+    "note": "Code-callable GPT-Luna via the Cursor SDK (pip install cursor-sdk; scripts/luna_sdk_extract.py). RunResult.usage gives input/output/cached/reasoning tokens for the token table. Mint CURSOR_API_KEY at Cursor dashboard -> Integrations. SDK model id is gpt-5.6-luna; gpt-5.6-luna-medium is the subagent reasoning-effort variant. Verified on tender 02: input=14009 output=3942 reasoning=639 total=17951."
   }
 }

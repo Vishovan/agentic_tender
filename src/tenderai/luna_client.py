@@ -15,7 +15,9 @@ from dataclasses import dataclass
 
 from tenderai.models import UsageRecord
 
-DEFAULT_MODEL = "gpt-5.6-luna-medium"
+# The Cursor SDK model id is "gpt-5.6-luna"; "gpt-5.6-luna-medium" is the
+# subagent reasoning-effort variant of the same model.
+DEFAULT_MODEL = "gpt-5.6-luna"
 
 
 @dataclass
