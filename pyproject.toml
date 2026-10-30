@@ -12,6 +12,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
+luna = ["cursor-sdk>=1.2"]
 
 [project.scripts]
 tenderai = "tenderai.cli:main"
