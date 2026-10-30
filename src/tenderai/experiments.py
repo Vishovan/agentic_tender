@@ -351,8 +351,10 @@ def blocked() -> dict:
         },
         "H4": {
             "question": "GPT-Luna raises requirement recall on genuine prose.",
-            "status": "blocked",
-            "needs": "GPT-Luna model id + endpoint + key; target tenders 02, 03, 05, 06",
+            "status": "demonstrated_on_02",
+            "needs": "GPT-Luna reached via Cursor subagent (gpt-5.6-luna-medium). Tender 02: 0 -> 65 "
+            "requirements (see runs/luna/02_summary.json). Remaining: 03, 05, 06 + per-call token "
+            "accounting (subagent does not expose usage; needs a code-callable endpoint).",
         },
         "H5": {
             "question": "Retrieve-then-read cuts tokens without losing recall.",

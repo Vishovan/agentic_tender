@@ -4,8 +4,10 @@
   "tenders": [],
   "llm": {
     "enabled": false,
-    "model": "",
+    "model": "gpt-5.6-luna-medium",
+    "access": "cursor-subagent",
     "api_base": "",
-    "api_key_env": "TENDERAI_API_KEY"
+    "api_key_env": "TENDERAI_API_KEY",
+    "note": "GPT-Luna is reached today via a Cursor subagent (see scripts/luna_match.py). Set api_base + enabled when a code-callable OpenAI-compatible Luna endpoint is available; the model id must stay gpt-5.6-luna-medium per TASK.md."
   }
 }
