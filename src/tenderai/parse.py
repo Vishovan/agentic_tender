@@ -60,6 +60,8 @@ def _number(token: str) -> float | None:
 
 def _split_numbers(text: str) -> list[float] | None:
     parts = re.split(r"\s*/\s*|\s*;\s*", text)
+    if len(parts) < 2 and text.count(":") >= 2:
+        parts = re.split(r"\s*:\s*", text)
     if len(parts) < 2:
         return None
     numbers = [_number(part) for part in parts]
@@ -138,15 +140,11 @@ def parse_constraint(
 
     single = re.fullmatch(r"(>=|≤|<=|≥|>|<)\s*(-?\d+(?:[.,]\d+)?)", text)
     if single:
-        return _from_columns(
-            unit_norm,
-            knowledge,
-            single.group(1),
-            _number(single.group(2)),
-            None,
-            None,
-            None,
-        )
+        op = single.group(1)
+        num = _number(single.group(2))
+        if op in {"<=", "≤", "<"}:
+            return _from_columns(unit_norm, knowledge, None, None, op, num, None)
+        return _from_columns(unit_norm, knowledge, op, num, None, None, None)
 
     phrase = re.search(
         r"(не более|не менее|не выше|не ниже|не превыша\w*|максимум|минимум|более|менее|свыше)\s*(-?\d+(?:[.,]\d+)?)",

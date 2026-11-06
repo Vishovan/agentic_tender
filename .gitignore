@@ -9,3 +9,10 @@ runs/
 .DS_Store
 .idea/
 *.egg-info/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz

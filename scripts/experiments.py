@@ -24,6 +24,8 @@ from tenderai.corpus import prepare_corpus
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run the testable hypotheses.")
     parser.add_argument("--dataset", type=Path, default=Path("dataset_zakupki"))
+    parser.add_argument("--luna-dir", type=Path, default=Path("runs/luna"))
+    parser.add_argument("--held-out", type=Path, default=Path("eval/held_out_draft.json"))
     parser.add_argument("--out", type=Path, default=Path("runs/experiments"))
     parser.add_argument("--tenders", nargs="*", default=None)
     args = parser.parse_args(argv)
@@ -31,12 +33,13 @@ def main(argv: list[str] | None = None) -> int:
     out: Path = args.out
     out.mkdir(parents=True, exist_ok=True)
 
-    corpus = prepare_corpus(args.dataset, args.tenders)
+    corpus = prepare_corpus(args.dataset, args.tenders, luna_dir=args.luna_dir)
     pairs = ex.evaluate(corpus)
 
     results = {
         "baseline": ex.baseline(corpus, pairs),
         "H1": ex.h1_encoding_unit(corpus, pairs),
+        "H2": ex.h2_embedding_alignment(corpus, held_out_path=args.held_out),
         "H3": ex.h3_hybrid_precision(pairs),
         "H6": ex.h6_reranker_ceiling(corpus),
         "H9": ex.h9_ocr_gating(corpus),
@@ -103,6 +106,14 @@ def _report(results: dict, blocked: dict, dataset: Path) -> str:
     lines.append("")
     lines.append("| ID | Hypothesis | Headline metric | Verdict |")
     lines.append("|----|------------|-----------------|---------|")
+    h2_lex = results["H2"]["held_out"].get("lexical", {})
+    h2_rrf = results["H2"]["held_out"].get("hybrid_rrf", {})
+    lines.append(f"| H2 | FRIDA latent space + RRF beats lexical alignment | "
+                 f"alignment acc **{h2_lex.get('alignment_accuracy')} -> {h2_rrf.get('alignment_accuracy')}**, "
+                 f"Recall@3 **{h2_lex.get('recall_at_3')} -> {h2_rrf.get('recall_at_3')}**, "
+                 f"macro-F1 **{h2_lex.get('macro_f1')} -> {h2_rrf.get('macro_f1')}**, "
+                 f"verified match precision **{h2_lex.get('verified_match_precision')} -> {h2_rrf.get('verified_match_precision')}** | "
+                 f"**{results['H2']['verdict']}** |")
     lines.append(f"| H3 | Hybrid keeps precision where closeness lies | pure-similarity match precision "
                  f"**{results['H3']['pure_similarity_match_precision']}** vs hybrid "
                  f"**{results['H3']['hybrid_match_precision']}**; "
@@ -125,7 +136,7 @@ def _report(results: dict, blocked: dict, dataset: Path) -> str:
                  f"{results['H9']['pdfs_empty_text_ocr_candidates']}/{results['H9']['pdfs_total']} "
                  f"PDF(s) are OCR candidates | **{results['H9']['verdict']}** |")
     lines.append("")
-    for name in ("H3", "H10", "H1", "H6", "H9"):
+    for name in ("H2", "H3", "H10", "H1", "H6", "H9"):
         payload = results[name]
         lines.append(f"### {name}")
         lines.append("")

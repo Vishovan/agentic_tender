@@ -25,14 +25,21 @@ def test_bolus_lock_does_not_steal_bolus():
 
 
 def test_pipeline_matches_a_single_position(tmp_path: Path):
+    import json
+
     dataset = tmp_path / "dataset"
     _write_sku(dataset / "SKU" / "CT0050L.xlsx")
     _write_tender(dataset / "tenders" / "01_0001" / "ooz.xlsx")
-    summary = run(dataset, tmp_path / "out")
+    out = tmp_path / "out"
+    summary = run(dataset, out)
     assert summary["requirements"] == 2
+    assert summary["vector_dimension"] == 1536
     row = summary["tender_rows"][0]
     assert row["sku_id"] == "CT0050L"
     assert row["status"] == "match"
+    structured = json.loads((out / "representations" / "structured.json").read_text(encoding="utf-8"))
+    assert len(structured) == 4
+    assert all(isinstance(item["vector"], list) and len(item["vector"]) == 1536 for item in structured)
 
 
 def test_unaligned_requirement_is_unknown_not_mismatch(tmp_path: Path):

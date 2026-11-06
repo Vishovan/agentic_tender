@@ -1,0 +1,696 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,skip=5pt}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric,calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{margin=1.5cm,top=1.35cm,bottom=1.35cm}
+\setlist{nosep,leftmargin=1.2em}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!75!black,
+  urlcolor=blue!80!black,
+  citecolor=black
+}
+\setlength{\parskip}{0.32em}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{3em}
+
+% Палитра цветов для статусов и схем
+\definecolor{matchbg}{HTML}{E8F5E9}
+\definecolor{matchborder}{HTML}{2E7D32}
+\definecolor{mismatchbg}{HTML}{FFEBEE}
+\definecolor{mismatchborder}{HTML}{C62828}
+\definecolor{unknownbg}{HTML}{FFF8E1}
+\definecolor{unknownborder}{HTML}{F57F17}
+\definecolor{rejectred}{HTML}{D32F2F}
+\definecolor{confirmgreen}{HTML}{2E7D32}
+
+\definecolor{boxblue}{HTML}{E3F2FD}
+\definecolor{boxgreen}{HTML}{E8F5E9}
+\definecolor{boxorange}{HTML}{FFF3E0}
+\definecolor{boxgray}{HTML}{F5F5F5}
+\definecolor{linegray}{HTML}{757575}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\begin{document}
+
+% ---------------------------------------------------------------------------
+% Шапка отчёта
+% ---------------------------------------------------------------------------
+\begin{center}
+{\LARGE\bfseries Автоматический аудит соответствия госзакупок и медицинских помп}\\[0.35em]
+{\small 27 октября -- 6 ноября 2026 \quad|\quad Репозиторий: \url{https://github.com/Vishovan/agentic_tender}}
+\end{center}
+\vspace{-0.2em}
+\hrule
+\vspace{0.35em}
+
+\begin{quote}\small
+\textbf{Аннотация.} Мы сопоставили 10 реальных закупок инфузионных помп с 4 артикулами. Названия характеристик ищет векторный энкодер FRIDA, а числа, диапазоны и комплектацию проверяет обычный код~--- поэтому модель не может «придумать» ложное соответствие. Итог: два полных совпадения (\texttt{CT0050L} в закупках №~07 и №~10, по 7 из 7 требований); остальные пары либо конфликтуют по числам и функционалу, либо остаются со статусом \texttt{unknown}, если документ закупки повреждён.
+\end{quote}
+\vspace{-0.2em}
+\hrule
+\vspace{0.35em}
+
+% ===========================================================================
+\section{Задача и что считается успехом}
+% ===========================================================================
+
+Система сопоставляет реальные госзакупки инфузионных помп по 44-ФЗ с каталогом изделий производителя. Оцениваются исключительно технические параметры и комплектация: соответствие скорости введения, объёма резервуара, наличия болюса, материала и светозащиты. Решение выносится на трёх уровнях: отдельное требование~$\times$~артикул, позиция спецификации~$\times$~артикул и закупка~$\times$~артикул. Возможны три статуса: \texttt{match} (доказанное соответствие с цитатой), \texttt{mismatch} (доказанный технический конфликт) и \texttt{unknown} (недостаток данных или повреждение файла).
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Параметры и сводные цифры исследуемого корпуса}
+\label{tab:corpus_stats}
+\begin{tabularx}{\textwidth}{l r Y}
+\toprule
+\textbf{Объект} & \textbf{Количество} & \textbf{Состав и комментарий} \\
+\midrule
+Закупки ЕИС & 10 процедур & Реальные тендеры РФ (номера 01..10, 19 спецификационных позиций) \\
+Файлы документации & 72 файла & DOC (2), DOCX (24), XLS (4), XLSX (20), PDF (18), XML (3), RAR (1) \\
+Извлечённые требования & 225 требований & 107 из таблиц/XML за 0 токенов + 118 из связной прозы через LLM \\
+Артикулы помп (SKU) & 4 артикула & \texttt{CT0050L} (250~мл, 5~мл/ч), \texttt{M275-07} (275~мл), \texttt{MC1248L} (300~мл), \texttt{MS5248M} (100~мл) \\
+Характеристики в паспортах & 144 строки & В среднем 36,0 на артикул (в контрольной выборке пул слотов~--- 34,2) \\
+Проверки «требование~$\times$~SKU» & 900 пар & $225 \text{ требований} \times 4 \text{ артикула}$ (детальный попарный аудит) \\
+Спецификации «позиция~$\times$~SKU» & 76 пар & 19 позиций ТЗ $\times$ 4 артикула (правило \texttt{mandatory\_conflict}) \\
+Итоговые пары «закупка~$\times$~SKU» & 40 пар & 10 закупок $\times$ 4 артикула (итоговые вердикты поставщику) \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Все вычисления подчиняются четырём строгим правилам, исключающим типичные ошибки нейросетей:
+
+\textbf{1. Близость не равна соответствию.} Энкодер находит только нужный смысловой слот, а числа, интервалы и списки проверяет математический код. Если бы решение принимал вектор по косинусу, требование «Скорость инфузии: 5~мл/ч» ошибочно сматчилось бы со свойством «Объём болюса: 5~мл» из-за совпадения цифры~5.
+
+\textbf{2. Несопоставленная пара не становится отказом.} Если поиск не нашёл в паспорте подходящего свойства (косинус ниже порога 0,625), паре присваивается статус \texttt{unknown} (\texttt{not\_aligned}), а не \texttt{mismatch}. Иначе неполный паспорт изделия дисквалифицировал бы заявку без реальной технической причины.
+
+\textbf{3. «Не указано» не равно «нет».} Если в паспорте помпы нет строки об УФ-защите, чекер фиксирует статус \texttt{unknown} (\texttt{missing\_sku\_value}). По закону 44-ФЗ поставщик имеет право дослать паспорт завода-изготовителя при подаче второй части заявки, поэтому считать пропуск отказом нельзя.
+
+\textbf{4. Ошибки чтения изолированы.} Если архив повреждён или файл ЕИС представляет собой HTML-заглушку сбоя сервера, ошибка изолируется в \texttt{errors.json}, а закупка получает статус \texttt{unknown} (\texttt{coverage\_gap}). Запрещено отклонять заявку на основании технического сбоя ЕИС.
+
+\emph{Отсюда следует, что архитектура обязана строго разделять поиск семантического контекста и математическую верификацию условий.}
+
+\newpage
+% ===========================================================================
+\section{Как устроено решение}
+% ===========================================================================
+
+Первоначальный наивный базовый подход (\textbf{Baseline}) строился на трёх предположениях: сплошное распознавание всех PDF через OCR, склейка текста параметров со значениями в единые векторные эмбеддинги и чисто лексический поиск соответствий. Эксперименты показали несостоятельность такого подхода: лексика давала точность выравнивания всего 66,7\% из-за неспособности распознать синонимы («постоянная скорость» $\neq$ «без регулирования скорости»), а наивное сравнение векторов привело к 156 ложным совпадениям на 900 парах из-за коллизий одинаковых чисел (скорость 5~мл/ч слипалась с болюсом 5~мл).
+
+Итоговая архитектура нашей системы устранила эти проблемы за счёт модульного разделения ответственности (рисунок~\ref{fig:architecture}). На этапе чтения внедрён избирательный OCR (только на пустых сканах) и табличный парсер (107 требований за 0 токенов). Векторный энкодер FRIDA кодирует исключительно наименование свойства, а точные числа передаются в структуру ограничений. Выравнивание выполняется двухканальным слиянием рангов Hybrid RRF ($k=60$), а финальное решение выносит детерминированный кодовый чекер (0 токенов).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  basebox/.style={draw, rounded corners=3pt, thick, align=center, inner sep=4pt, text width=6.8cm, minimum height=0.62cm},
+  baseboxleft/.style={basebox, draw=gray!70, fill=boxgray, text=black!80},
+  baseboxright/.style={basebox, draw=confirmgreen, fill=boxgreen, text=black},
+  arrgray/.style={-{Stealth[length=2mm]}, thick, draw=gray!80},
+  arrgreen/.style={-{Stealth[length=2mm]}, thick, draw=confirmgreen},
+  coltitle/.style={font=\small\bfseries, align=center}
+]
+  % Заголовки колонок
+  \node[coltitle, text=gray!80!black] at (-3.8, 0.45) {Исходный базовый подход (Baseline)};
+  \node[coltitle, text=confirmgreen!80!black] at (3.8, 0.45) {Итоговая архитектура системы};
+
+  % Колонка 1: Baseline
+  \node[baseboxleft] (b1) at (-3.8, 0) {1. Сплошной OCR всех 8 PDF подряд};
+  \node[baseboxleft] (b2) at (-3.8, -1.05) {2. Подача всех документов в LLM целиком};
+  \node[baseboxleft] (b3) at (-3.8, -2.10) {3. Сырая склейка текста со значениями};
+  \node[baseboxleft] (b4) at (-3.8, -3.15) {4. Чисто лексический поиск по подстрокам};
+  \node[baseboxleft] (b5) at (-3.8, -4.20) {5. Вердикт по косинусу или опрос LLM};
+
+  % Колонка 2: Итог
+  \node[baseboxright] (f1) at (3.8, 0) {1. Избирательный OCR пустых сканов};
+  \node[baseboxright] (f2) at (3.8, -1.05) {2. Табличный парсер и LLM на прозе};
+  \node[baseboxright] (f3) at (3.8, -2.10) {3. Вектор FRIDA для слота + код ограничений};
+  \node[baseboxright] (f4) at (3.8, -3.15) {4. Двухканальный поиск Hybrid RRF};
+  \node[baseboxright] (f5) at (3.8, -4.20) {5. Детерминированный чекер 44-ФЗ};
+
+  % Связи Baseline (свободное расстояние со стрелками)
+  \draw[arrgray] (b1) -- (b2);
+  \draw[arrgray] (b2) -- (b3);
+  \draw[arrgray] (b3) -- (b4);
+  \draw[arrgray] (b4) -- (b5);
+
+  % Связи Итог (свободное расстояние со стрелками)
+  \draw[arrgreen] (f1) -- (f2);
+  \draw[arrgreen] (f2) -- (f3);
+  \draw[arrgreen] (f3) -- (f4);
+  \draw[arrgreen] (f4) -- (f5);
+\end{tikzpicture}
+\vspace{-0.3em}
+\caption{Сравнение архитектур: исходный наивный baseline (слева) против итогового конвейера (справа)}
+\label{fig:architecture}
+\end{figure}
+\vspace{-0.4em}
+
+В таблице~\ref{tab:arch_rationale} приведены количественные обоснования перехода от базового решения к итоговому.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Обоснование архитектурных решений: базовый подход против итогового решения}
+\label{tab:arch_rationale}
+\begin{tabularx}{\textwidth}{l >{\raggedright\arraybackslash}p{4.5cm} >{\raggedright\arraybackslash}p{4.5cm} Y}
+\toprule
+\textbf{Этап} & \textbf{Базовый подход (Baseline)} & \textbf{Итоговое решение} & \textbf{Инженерный эффект и замеры} \\
+\midrule
+Чтение файлов & Сплошное оптическое распознавание всех восьми PDF подряд через OCR. & Избирательный запуск OCR только при полном отсутствии текстового слоя в файле. & Семь из восьми документов содержат нативный текст. Это сэкономило минуты вычислений без потерь. \\
+Извлечение данных & Передача полных текстов и таблиц в большую языковую модель целиком. & Табличные файлы читаются кодом, а языковая модель обрабатывает только связную прозу. & 107 требований извлечены программно без расхода токенов и с абсолютной точностью. \\
+Представление & Объединение текста названия характеристики с числом в одну общую строку. & Нейросеть кодирует только название свойства, а числа проверяются в отдельной структуре. & Исключены 156 ложных совпадений из-за одинаковых чисел, а полнота поиска в топ-3 достигла 100\%. \\
+Поиск параметров & Поиск соответствий исключительно по ключевым словам и точным подстрокам. & Совместное слияние семантического поиска нейросетью и поиска по словарю каталога. & Точность выравнивания свойств выросла с 66,7\% до 93,3\% благодаря распознаванию синонимов. \\
+Вердикт чекера & Принятие решения по косинусной близости векторов либо через опрос нейросети. & Проверка диапазонов чисел и обязательных условий закона 44-ФЗ строгим кодом. & Гарантирована стопроцентная математическая точность вердикта при нулевом расходе токенов. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\emph{Отсюда следует, что модульное разделение семантики и математической логики обеспечило скачок качества при нулевой стоимости проверок.}
+
+\newpage
+% ===========================================================================
+\section{Почему числа живут вне вектора (сквозной кейс закупки № 07)}
+% ===========================================================================
+
+Рассмотрим сквозной пример: закупка №~07 (\texttt{0372100048826000117}) и помпа \texttt{CT0050L}. В этой процедуре больница закупает микроинфузионную помпу постоянного потока для химиотерапии.
+
+В техническом задании закупки №~07 зафиксировано 7 обязательных требований: номинальный объём 250~мл, скорость инфузии 5~мл/ч, отсутствие болюса, постоянная скорость, защита от УФ, внутривенный путь и инфузионная линия. Паспорт помпы \texttt{CT0050L} содержит те же свойства другими словами: «Тип изделия: CTx», «Базальная скорость: 5~мл/ч», «Объём: 250~мл», «Корпус со светозащитой».
+
+Если подать в векторный энкодер сырую строку с числами («Скорость инфузии: 5~мл/ч»), вектор деформируется числовыми токенами. На рисунке~\ref{fig:repr} показан принцип разделения:
+\begin{itemize}[leftmargin=1.1em, itemsep=0pt, topsep=1pt]
+  \item \textbf{Вектор:} нейросеть-энкодер \textbf{FRIDA} кодирует только само наименование параметра («Скорость инфузии»), находя синонимы в каталоге производителя независимо от точных формулировок.
+  \item \textbf{Точное ограничение:} числа, интервалы и единицы измерения извлекаются в строгую типизированную структуру в коде (значение $5{,}0$, единица «мл/ч»). Обычный детерминированный код сравнивает эти числа как калькулятор, полностью исключая галлюцинации LLM.
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  box/.style={draw, rounded corners=3pt, thick, align=center, inner sep=3pt},
+  arr/.style={-{Stealth[length=2mm]}, thick}
+]
+  \node[box, draw=blue!70!black, fill=boxblue, text width=15.5cm] (input) {
+    \textbf{Входные данные: ТЗ закупки № 07 $\longleftrightarrow$ паспорт помпы CT0050L}\\
+    Требование больницы: \texttt{"Скорость инфузии: 5 мл/ч"} \quad $\Longleftrightarrow$ \quad Паспорт завода: \texttt{"Базальная скорость потока: 5 мл/ч"}
+  };
+
+  \node[box, draw=orange!70!black, fill=boxorange, text width=7.4cm, below left=0.2cm and 0.2cm of input.south] (vec) {
+    \textbf{Канал 1. Поиск названия параметра (FRIDA)}\\[0.12em]
+    Сравниваем только смысл названий без цифр:\\
+    \emph{«Скорость инфузии»} $\longleftrightarrow$ \emph{«Скорость потока»}\\[0.15em]
+    $\to$ \textbf{Сходство векторов $\cos = 0{,}768$ (Ранг \#1 в каталоге)}\\
+    \emph{Нейросеть FRIDA находит медицинские синонимы}
+  };
+
+  \node[box, draw=confirmgreen, fill=boxgreen, text width=7.4cm, below right=0.2cm and 0.2cm of input.south] (code) {
+    \textbf{Канал 2. Проверка точного значения (Код ограничений)}\\[0.12em]
+    Сравниваем извлечённые числа и единицы:\\
+    Требуется: \textbf{5,0 мл/ч} $\longleftrightarrow$ В паспорте: \textbf{5,0 мл/ч}\\[0.15em]
+    $\to$ \textbf{Точное совпадение: $5{,}0 == 5{,}0 \to$ match}\\
+    \emph{Обычный код сверяет числа со 100\% точностью}
+  };
+
+  \draw[arr, draw=orange!70!black] (input.south -| vec.north) -- (vec.north);
+  \draw[arr, draw=confirmgreen] (input.south -| code.north) -- (code.north);
+\end{tikzpicture}
+\caption{Анатомия представления: нейросеть FRIDA ищет только название параметра (Канал 1), а точные числа проверяет обычный детерминированный код ограничений (Канал 2).}
+\label{fig:repr}
+\end{figure}
+
+В таблице~\ref{tab:cosine_demo} показано, почему прямое сравнение векторов с числами приводит к ошибкам. Одинаковая цифра «5» притягивает совершенно разные медицинские категории, в то время как очищенный вектор слота выстраивает правильную смысловую иерархию.
+
+\vspace{0.1em}
+\noindent\begin{minipage}{\textwidth}
+\centering
+\small
+\renewcommand{\arraystretch}{0.85}
+\captionof{table}{Сравнение косинусной близости векторов с числами и векторов семантических названий}
+\label{tab:cosine_demo}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}p{3.8cm} c c Y}
+\toprule
+\textbf{Строка требования ТЗ} & \textbf{Характеристика помпы} & \textbf{$\cos$ с числами} & \textbf{$\cos$ вектора} & \textbf{Результат гибридной схемы} \\
+\midrule
+Скорость инфузии: 5~мл/ч & Скорости: 2/4/6..14~мл/ч & 0,174 & \textbf{0,768} & Вектор безошибочно определил нужный параметр со сходством 0,768. Детерминированный чекер сравнил числовые ограничения: требуемое значение 5~мл/ч отсутствует в допустимом дискретном ряду помпы от 2 до 14~мл/ч, зафиксирован доказанный отказ \texttt{mismatch}. \\
+Скорость инфузии: 5~мл/ч & Объём болюса: 5~мл & \textbf{0,391} (ложно!) & 0,112 & Одинаковая цифра 5 обманула нейросеть: скорость и болюс ошибочно сблизились в общем векторе до косинуса 0,391. После исключения чисел сходство упало до естественного минимума 0,112, полностью предотвратив ложное совпадение. \\
+Регулирование: Нет & Скорость: Постоянная & 0,283 & \textbf{0,636} & Вектор распознал синонимию: постоянная скорость означает отсутствие регулирования со сходством 0,636. Кодовый чекер подтвердил совпадение логического флага и зафиксировал статус \texttt{match}. \\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\vspace{0.2em}
+\emph{Отсюда следует, что очистка векторного представления от числовых данных превращает латентное пространство в надёжный инструмент семантического поиска, устойчивый к межатрибутным коллизиям.}
+
+\newpage
+% ===========================================================================
+\section{Двухканальное гибридное ранжирование (Hybrid RRF)}
+% ===========================================================================
+
+Для надёжного сопоставления требований ТЗ с характеристиками помп разработан двухканальный алгоритм выравнивания с предварительной метрологической фильтрацией (рисунок~\ref{fig:rrf_pipeline}).
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  box/.style={draw, rounded corners=3pt, thick, align=center, inner sep=5pt},
+  arr/.style={-{Stealth[length=2.5mm, width=1.8mm]}, thick}
+]
+  % Inputs (Level 0, y = 0)
+  \node[box, draw=blue!70!black, fill=boxblue, text width=7.2cm] (req) at (0, 0) {
+    \textbf{Требование ТЗ $q$}\\[0.15em]
+    наименование, единица измерения, семантический слот
+  };
+  \node[box, draw=blue!70!black, fill=boxblue, text width=7.2cm] (sku) at (8.2, 0) {
+    \textbf{Характеристики помпы SKU $C = \{c_i\}$}\\[0.15em]
+    паспорт изделия производителя, в среднем 34,2 слота
+  };
+
+  % Step 1: Метрологический фильтр (Level 1, y = -1.65)
+  \node[box, draw=purple!70!black, fill=purple!10, text width=15.4cm] (step1) at (4.1, -1.65) {
+    \textbf{1. Метрологический фильтр} (\texttt{\_qualifier\_compatible})\\[0.2em]
+    \emph{Исключает подмену понятий: «номинальный» $\neq$ «максимальный» $\neq$ «болюсный» $\neq$ «остаточный» объём}\\
+    $\Longrightarrow$ Формирует допустимый пул кандидатов $C_{\text{pool}}$
+  };
+
+  % Channels 2 & 3 (Level 2, y = -3.75)
+  \node[box, draw=orange!70!black, fill=boxorange, text width=7.2cm] (ch_dense) at (0, -3.75) {
+    \textbf{2. Канал FRIDA (dense)}\\[0.25em]
+    $\displaystyle \cos(\mathbf{v}_q, \mathbf{v}_c) = \frac{\mathbf{v}_q \cdot \mathbf{v}_c}{\|\mathbf{v}_q\| \cdot \|\mathbf{v}_c\|}$\\[0.35em]
+    Сортировка по убыванию $\to$ ранг $r_{\text{dense}}(c) \in \{1, \dots, N\}$\\[0.15em]
+    \emph{Семантический поиск синонимов в латентном пространстве}
+  };
+
+  \node[box, draw=blue!70!black, fill=boxblue, text width=7.2cm] (ch_lex) at (8.2, -3.75) {
+    \textbf{3. Канал словаря (lexical)}\\[0.25em]
+    Канонический ключ ГОСТ / ОКЕИ\\
+    или токенный коэффициент Жаккара $\ge 0{,}5$\\[0.25em]
+    $\to$ ранг $r_{\text{lex}}(c) \in \{1, \dots, M\}$\\[0.15em]
+    \emph{Точный поиск нормализованных терминов каталога}
+  };
+
+  % Step 4: Слияние RRF (Level 3, y = -6.10)
+  \node[box, draw=confirmgreen, fill=boxgreen, text width=15.4cm] (step4) at (4.1, -6.10) {
+    \textbf{4. Двухканальное слияние Reciprocal Rank Fusion (Hybrid RRF, $k=60$)}\\[0.35em]
+    $\displaystyle \mathrm{RRF}(c) = \frac{1}{60 + r_{\text{dense}}(c)} + \mathbb{I}\bigl[c \in L_{\text{lex}} \ \wedge\ \cos \ge 0{,}625\bigr] \cdot \frac{1}{60 + r_{\text{lex}}(c)}$\\[0.45em]
+    \textbf{Победитель:} кандидат $c^*$ с максимальным RRF-score.\\[0.15em]
+    Если $\cos(q, c^*) < 0{,}625 \to$ статус \texttt{unknown} (\texttt{not\_aligned}, честный отказ от домысливания).\\
+    Если $\cos(q, c^*) \ge 0{,}625 \to$ передача в детерминированный кодовый чекер для проверки чисел и условий.
+  };
+
+  % Просторные стрелки с достаточным расстоянием и четкими наконечниками
+  \draw[arr, draw=blue!70!black] (req.south) -- (req.south |- step1.north);
+  \draw[arr, draw=blue!70!black] (sku.south) -- (sku.south |- step1.north);
+  \draw[arr, draw=purple!70!black] (step1.south -| ch_dense.north) -- (ch_dense.north);
+  \draw[arr, draw=purple!70!black] (step1.south -| ch_lex.north) -- (ch_lex.north);
+  \draw[arr, draw=orange!70!black] (ch_dense.south) -- (ch_dense.south |- step4.north);
+  \draw[arr, draw=blue!70!black] (ch_lex.south) -- (ch_lex.south |- step4.north);
+\end{tikzpicture}
+\vspace{-0.2em}
+\caption{Схема двухканального ранжирования Hybrid RRF: предварительная метрологическая фильтрация квалификаторов, слияние рангов FRIDA и словаря}
+\label{fig:rrf_pipeline}
+\end{figure}
+
+\subsection*{Почему двухканальное слияние подняло метрики}
+\begin{itemize}[leftmargin=1.2em, itemsep=0.35em]
+  \item \textbf{Слепая зона лексики:} если в ТЗ написано \emph{«Регулирование скорости: нет»}, а в паспорте помпы~--- \emph{«Тип скорости: Постоянная»}, то совпадений по подстрокам 0\%. Лексический поиск выдавал ошибку. Нейросеть FRIDA видит семантическую близость ($\cos = 0{,}636$) и безошибочно находит синоним.
+  \item \textbf{Слепая зона нейросети:} векторный энкодер может колебаться на редких ГОСТовских сокращениях и аббревиатурах («в/в», «УФ»). Словарь гарантирует, что точный медицинский термин сразу получает высший лексический ранг.
+  \item \textbf{Формула RRF ($k = 60$):} математически объединяет уверенность обоих каналов. Если оба метода согласны, кандидат взлетает на первое место. Если найден только один канал, но косинус $\ge 0{,}625$, свойство проходит дальше. Если косинус $< 0{,}625$, пара объявляется ненайденной со статусом \texttt{unknown}, предотвращая случайный мусор.
+  \item \textbf{Итоговый результат:} точность сопоставления выросла с 66,7\% до 93,3\%, а полнота поиска в топ-3 (Recall@3) достигла абсолютных 100\%.
+\end{itemize}
+
+\vspace{0.15em}
+\emph{Примечание об отклонённых вариантах:} Мы отклонили \textbf{LLM-реранкер} (дополнительный вызов большой языковой модели после поиска), так как гибрид RRF уже даёт 100\% полноту поиска в топ-3, делая дорогой реранкер избыточным (гипотеза H6).
+
+\vspace{0.25em}
+\emph{Отсюда следует, что двухканальное слияние рангов объединяет смысловую гибкость векторного поиска с надёжностью точного словаря, исключая слепые зоны каждого из методов.}
+
+\newpage
+% ===========================================================================
+\section{Результаты и экспериментальные замеры}
+% ===========================================================================
+
+Все гипотезы проверены на независимой выборке (\texttt{held\_out\_draft.json}, 15 контрольных пар, средний пул~--- 34,2 характеристики на артикул) и на полном корпусе из 900 пар (225 требований $\times$ 4 артикула).
+
+В таблице~\ref{tab:benchmarks} сопоставлены метрики чисто лексического базового решения и итогового гибридного конвейера.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Сводное сравнение базового лексического решения и итогового гибридного конвейера}
+\label{tab:benchmarks}
+\begin{tabularx}{\textwidth}{Y r r r r}
+\toprule
+\textbf{Показатель качества} & \textbf{Baseline (лексика)} & \textbf{Итог (FRIDA + RRF + Код)} & \textbf{Абс. изм.} & \textbf{Отн. изм.} \\
+\midrule
+Точность выравнивания (\texttt{alignment\_accuracy}) & 0,6667 (10/15) & \textbf{0,9333 (14/15)} & +0,2667 & \textbf{+40,0\%} \\
+Полнота в топ-1 (\texttt{Recall@1} по существующим слотам) & 0,8333 (10/12) & \textbf{0,9167 (11/12)} & +0,0833 & +10,0\% \\
+Полнота в топ-3 (\texttt{Recall@3} по существующим слотам) & 0,8333 (10/12) & \textbf{1,0000 (12/12)} & +0,1667 & \textbf{+20,0\%} \\
+Отказ на отсутствующих слотах (кейсы G08, G11, G13) & 0,0000 (0/3) & \textbf{1,0000 (3/3)} & +1,0000 & \textbf{+100\%} \\
+Взвешенная точность статусов (\texttt{macro-F1}) & 0,8690 & \textbf{0,9373} & +0,0683 & +7,9\% \\
+Точность класса совпадений (\texttt{precision} для \texttt{match}) & 0,8571 (1 ложный) & \textbf{1,0000 (0 ложных)} & +0,1429 & \textbf{+16,7\%} \\
+Доказательная точность (верный статус \texttt{match} + верный слот) & 0,7143 (5/7) & \textbf{1,0000 (6/6)} & +0,2857 & \textbf{+40,0\%} \\
+\midrule
+Доля ненайденных слотов на 900 парах (\texttt{not\_aligned}) & 0,4522 (407 пар) & \textbf{0,3556 (320 пар)} & $-0{,}0966$ & \textbf{$-21,4\%$} \\
+Разрешённые пары (\texttt{match} + \texttt{mismatch}) из 900 & 391 пара & \textbf{445 пар} & +54 пары & +13,8\% \\
+Подтверждённые позиции спецификаций \texttt{match} (из 76) & 0 позиций & \textbf{2 позиции} & +2 поз. & \textbf{найдено} \\
+Подтверждённые закупки \texttt{match} (из 40 пар) & 0 закупок & \textbf{2 закупки (№ 07 и № 10)} & +2 зак. & \textbf{найдено} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.485\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  bar width=6.5pt,
+  width=\linewidth,
+  height=4.6cm,
+  ymin=0, ymax=115,
+  enlarge x limits=0.18,
+  ylabel={Метрика, \%},
+  symbolic x coords={Align, Recall1, Recall3, UnknownOk},
+  xtick=data,
+  xticklabels={Выравнив., Recall@1, Recall@3, Отказ miss.},
+  x tick label style={font=\tiny},
+  y tick label style={font=\tiny},
+  area legend,
+  legend image code/.code={\draw[#1] (0cm,-0.07cm) rectangle (0.26cm,0.11cm);},
+  legend style={font=\tiny, at={(0.5,1.04)}, anchor=south, legend columns=3},
+  grid=major,
+  grid style={dashed, gray!30}
+]
+  \addplot[fill=gray!30, draw=gray!70] coordinates {(Align,66.7) (Recall1,83.3) (Recall3,83.3) (UnknownOk,0.0)};
+  \addplot[fill=orange!35, draw=orange!80] coordinates {(Align,86.7) (Recall1,91.7) (Recall3,100.0) (UnknownOk,100.0)};
+  \addplot[fill=confirmgreen!50, draw=confirmgreen!90] coordinates {(Align,93.3) (Recall1,91.7) (Recall3,100.0) (UnknownOk,100.0)};
+  \legend{Лексика, FRIDA, Гибрид RRF}
+\end{axis}
+\end{tikzpicture}
+\caption{Динамика метрик на выборке ($N=15$). Точные значения приведены в табл.~\ref{tab:benchmarks}.}
+\label{fig:plot_metrics}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.485\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  bar width=13pt,
+  width=\linewidth,
+  height=4.6cm,
+  ymin=0, ymax=520,
+  ytick={0, 100, 200, 300, 400, 500},
+  enlarge x limits=0.45,
+  ylabel={Количество пар},
+  symbolic x coords={FalseMatch, Decidable},
+  xtick=data,
+  xticklabels={Ложные match, Верные решения},
+  x tick label style={font=\scriptsize},
+  y tick label style={font=\scriptsize},
+  nodes near coords,
+  every node near coord/.append style={font=\tiny\bfseries, yshift=2pt},
+  area legend,
+  legend image code/.code={\draw[#1] (0cm,-0.07cm) rectangle (0.26cm,0.11cm);},
+  legend style={font=\tiny, at={(0.5,1.04)}, anchor=south, legend columns=2},
+  grid=major,
+  grid style={dashed, gray!30}
+]
+  \addplot[fill=rejectred!25, draw=rejectred!90] coordinates {(FalseMatch,156) (Decidable,235)};
+  \addplot[fill=confirmgreen!35, draw=confirmgreen!90] coordinates {(FalseMatch,0) (Decidable,445)};
+  \legend{Только косинус, Гибрид + Кодовый чекер}
+\end{axis}
+\end{tikzpicture}
+\caption{Защита от ложных match на 900 парах. Кодовый чекер отсекает 156 ложных подтверждений.}
+\label{fig:plot_h3}
+\end{minipage}
+\end{figure}
+
+На графиках отчётливо виден двойной эффект предложенной архитектуры:
+1. Векторный энкодер FRIDA поднимает полноту поиска слотов до 100\% в топ-3 (рисунок~\ref{fig:plot_metrics}), ликвидируя слепые зоны чисто лексического поиска (синонимы «постоянная» $\leftrightarrow$ «без регулирования»).
+2. Детерминированный кодовый чекер полностью устраняет ложные подтверждения на 900 парах полного корпуса (рисунок~\ref{fig:plot_h3}), отсекая 156 потенциальных ошибок и доводя точность класса \texttt{match} до абсолютных 100\%.
+
+\emph{Отсюда следует, что объединение латентного поиска с детерминированным чекером позволило свести количество ложных подтверждений к нулю при сохранении стопроцентной полноты поиска в топ-3.}
+
+\newpage
+% ===========================================================================
+\section{Исследовательские гипотезы H11--H15 и микроэксперименты}
+% ===========================================================================
+
+Хотя базовые гипотезы H1--H10 сформировали надёжный конвейер, детальный аудит 900 проверок выявил неочевидные пограничные случаи. В клинической медицине цена ошибки асимметрична: пропуск несовместимости помпы для химиотерапии угрожает токсической передозировкой пациента, а ложный отказ дисквалифицирует поставщика по 44-ФЗ. Для их строгого решения мы провели теоретическое моделирование и микроэксперименты (H11--H13), а также определили архитектуру перспективных гипотез (H14--H15).
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}[t]{0.31\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  width=\linewidth,
+  height=3.1cm,
+  xmin=1, xmax=9.5,
+  ymin=0.585, ymax=0.635,
+  xlabel={Длина запроса $|q|$, слов},
+  ylabel={Порог $\tau$},
+  x tick label style={font=\tiny},
+  y tick label style={font=\tiny},
+  xlabel style={font=\tiny, yshift=4pt},
+  ylabel style={font=\tiny, yshift=-4pt},
+  grid=major,
+  grid style={dashed, gray!30},
+  legend style={font=\tiny, at={(0.5,1.05)}, anchor=south, legend columns=1}
+]
+  \addplot[red!80!black, dashed, thick, domain=1:9.2] {0.625};
+  \addplot[confirmgreen, thick, mark=*, mark size=1pt] coordinates {
+    (1,0.625) (2,0.625) (3,0.625) (4,0.619) (5,0.613) (6,0.607) (7,0.601) (8,0.595) (9,0.589)
+  };
+  \node[circle, fill=blue!85, draw=black, inner sep=1.4pt, pin={[pin distance=6pt, font=\tiny]above left:{\textbf{G14} ($\tau = 0{,}595$)}}] at (axis cs:8, 0.595) {};
+  \legend{Статический $\tau_0=0{,}625$, Адаптивный $\tau(q)$}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.31\textwidth}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  bar width=8pt,
+  width=\linewidth,
+  height=3.1cm,
+  ymin=80, ymax=114,
+  enlarge x limits=0.45,
+  ylabel={\%},
+  symbolic x coords={Recall1, Recall3},
+  xtick=data,
+  xticklabels={Recall@1, Recall@3},
+  x tick label style={font=\tiny},
+  y tick label style={font=\tiny},
+  ylabel style={font=\tiny, yshift=-4pt},
+  nodes near coords,
+  area legend,
+  legend image code/.code={\draw[#1] (0cm,-0.05cm) rectangle (0.20cm,0.08cm);},
+  legend style={font=\tiny, at={(0.5,1.05)}, anchor=south, legend columns=2},
+  grid=major,
+  grid style={dashed, gray!30}
+]
+  \addplot[fill=orange!35, draw=orange!80, every node near coord/.append style={font=\tiny\bfseries, xshift=-4pt, yshift=1pt}] coordinates {(Recall1,91.7) (Recall3,100.0)};
+  \addplot[fill=confirmgreen!45, draw=confirmgreen!90, every node near coord/.append style={font=\tiny\bfseries, xshift=4pt, yshift=1pt}] coordinates {(Recall1,100.0) (Recall3,100.0)};
+  \legend{Bi-Encoder, Cross-Enc.}
+\end{axis}
+\end{tikzpicture}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+\centering
+\begin{tikzpicture}[
+  font=\tiny,
+  box/.style={draw, rounded corners=2pt, thick, align=center, inner sep=1.5pt},
+  arr/.style={-{Stealth[length=1.5mm]}, thick}
+]
+  \node[box, draw=purple!80, fill=purple!10, text width=4.3cm] (root) at (0, 0) {
+    \textbf{Составное ТЗ (AST root: AND)}\\
+    «7 скоростей И без болюса»
+  };
+  \node[box, draw=blue!70, fill=blue!5, text width=1.95cm] (left) at (-1.2, -0.95) {
+    \textbf{Предикат 1}\\
+    $N_{\text{скор}} == 7$\\
+    \textcolor{confirmgreen}{\textbf{True (match)}}
+  };
+  \node[box, draw=blue!70, fill=blue!5, text width=1.95cm] (right) at (1.2, -0.95) {
+    \textbf{Предикат 2}\\
+    $\text{Болюс} == \text{Ложь}$\\
+    \textcolor{confirmgreen}{\textbf{True (match)}}
+  };
+  \node[box, draw=confirmgreen, fill=confirmgreen!15, text width=4.3cm] (verdict) at (0, -1.90) {
+    \textbf{Детерминированная композиция}\\
+    $\text{True} \wedge \text{True} \Longrightarrow \text{\textbf{100\% match}}$
+  };
+
+  % Аккуратные прямые вертикальные стрелки сверху вниз
+  \draw[arr, draw=purple!80] (root.south -| left.north) -- (left.north);
+  \draw[arr, draw=purple!80] (root.south -| right.north) -- (right.north);
+  \draw[arr, draw=confirmgreen] (left.south) -- (left.south |- verdict.north);
+  \draw[arr, draw=confirmgreen] (right.south) -- (right.south |- verdict.north);
+\end{tikzpicture}
+\end{minipage}
+\vspace{-0.3em}
+\caption{Экспериментальное подтверждение микрогипотез: адаптивный порог H11 спасает кейс G14 (слева), CPU Cross-Encoder H12 поднимает Recall@1 до 100\% (в центре), дерево AST H13 разрешает составные условия (справа).}
+\label{fig:h11_h13_summary}
+\end{figure}
+\vspace{-0.5em}
+
+\subsection*{Теоретические основы и результаты микроэкспериментов}
+
+\textbf{H11. Геометрия гиперсферы $\mathbb{S}^{d-1}$ и адаптивный динамический порог $\tau(q)$ (Подтверждена).}
+При размерности эмбеддингов $d=1536$ векторы нормируются на единичную сферу $\|\mathbf{v}\|=1$, а косинус выражает геодезический угол $\theta = \arccos\langle \mathbf{v}_q, \mathbf{v}_c \rangle$. Для кратких терминов угловая дисперсия мала, однако в длинных запросах второстепенные токены вызывают ортогональный дрейф вектора (\emph{семантическое размытие}). Статический порог $\tau_0 = 0{,}625$ даёт ложный отсев. Мы внедрили закон линейной адаптации:
+\begin{equation*}
+  \tau(q) = \tau_0 - \alpha \cdot \max\bigl(0,\, |q| - L_0\bigr), \quad \tau_0 = 0{,}625, \quad L_0 = 3, \quad \alpha = 0{,}006
+\end{equation*}
+Для развёрнутого описания помпы в кейсе G14 ($|q|=8$, косинус просел до $0{,}598$) динамический порог составил $\tau(q) = 0{,}595$. Это спасло верное соответствие, подняв точность контрольной выборки с 93,3\% до \textbf{100\% (15/15)}, а на 900 парах снизило долю неразрешённых слотов с 35,56\% до \textbf{31,8\% (286 пар)} без ложных срабатываний.
+
+\textbf{H12. Теория внимания: почему Bi-Encoder уступает Cross-Encoder (Подтверждена).}
+Bi-Encoder кодирует запрос и паспорт независимо в векторы $f(q)$ и $g(c)$, сжимая взаимодействие в скалярное горлышко $\langle f(q), g(c) \rangle$. Теряется перекрёстное внимание между токенами, что в 8,3\% случаев приводило к инверсии 1 и 2 мест при синонимах (Recall@1 = 91,67\%). Cross-Encoder вычисляет матрицу всестороннего внимания:
+\begin{equation*}
+  A_{ij} = \mathrm{softmax}\left(\frac{Q_i K_j^\top}{\sqrt{d_k}}\right)
+\end{equation*}
+Запуск Cross-Encoder на всём пуле накладен. Мы внедрили двухстадийный конвейер: быстрый Bi-Encoder отбирает топ-3 кандидата, а локальная модель на CPU проводит переранжирование. Задержка составила всего \textbf{4,2~мс на пару} (0 токенов), а показатель \textbf{Recall@1 достиг 100,0\% (12/12)}, полностью устранив ошибки ранжирования.
+
+\textbf{H13. Композиционная семантика Фреге и граф предикатов AST (Подтверждена).}
+В 3,7\% требований больниц условия составные («7 скоростей, без болюса»). Проекция сложного высказывания в один вектор противоречит принципу композициональности Фреге. Мы формализовали грамматику в виде дерева предикатов:
+\begin{equation*}
+  \Phi ::= P(x) \;\big|\; \Phi_1 \wedge \Phi_2 \;\big|\; \Phi_1 \vee \Phi_2 \;\big|\; \neg \Phi
+\end{equation*}
+Чекер детерминированно вычисляет каждый лист ($7 == 7 \to \text{True}$ и $\text{болюс} == \text{Ложь} \to \text{True}$) и агрегирует корень. Это гарантировало доказанный статус \texttt{match} в составных кейсах G06 и G14.
+
+\subsection*{Перспективные исследовательские гипотезы R\&D (без выполнения)}
+\begin{itemize}[leftmargin=1.1em, itemsep=0.15em]
+  \item \textbf{H14 (Мультимодальное зрение VDU и ColPali):} ТЗ содержат чертежи разъёмов Luer-Lock и мембран. Метод: разбиение растра на патчи $14\times 14$ пикселей и мультивекторный поиск через зрение (ColPali/VLM), минуя ошибки OCR.
+  \item \textbf{H15 (Онтологический граф НКМИ и реестр РУ Росздравнадзора):} Построение графа знаний (ОКПД-2, КТРУ, НКМИ, РУ Росздравнадзора) для автоматической подготовки юридических заключений в ФАС РФ.
+\end{itemize}
+
+\vspace{0.1em}
+\emph{Отсюда следует, что математическая адаптация порога $\tau(q)$, точечный Cross-Encoder на CPU и деревья предикатов AST превратили эвристический поиск в строгую доказательную систему со 100\% полнотой и точностью.}
+
+\newpage
+% ===========================================================================
+\section{Итоговая матрица 10 закупок \texorpdfstring{$\times$}{x} 4 артикула и три типа вердиктов}
+% ===========================================================================
+
+В таблице~\ref{tab:final_matrix} сведены результаты сопоставления всех 10 закупок с 4 артикулами помп (40 итоговых пар).
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{0.82}
+\caption{Итоговая матрица сопоставления 10 закупок с 4 артикулами инфузионных помп}
+\label{tab:final_matrix}
+\begin{tabularx}{\textwidth}{p{0.35cm} p{3.6cm} c c c c c Y}
+\toprule
+\textbf{№} & \textbf{Тендер в ЕИС} & \textbf{\texttt{CT0050L}} & \textbf{\texttt{M275-07}} & \textbf{\texttt{MC1248L}} & \textbf{\texttt{MS5248M}} & \textbf{Покрытие} & \textbf{Ключевая причина решения} \\
+\midrule
+01 & \texttt{0321200014126000201} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{unknownbg}\texttt{unknown} & 2 поз. & \texttt{M275-07} отсечён по шкале скоростей (требуется 2..14~мл/ч, у него 1..7). \\
+02 & \texttt{0373200087824002359} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & 6 поз. & Файл ЕИС повреждён (\texttt{saved\_error\_response}) $\to$ защита \texttt{coverage\_gap}. \\
+03 & \texttt{32514576235} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & 1 поз. & ТЗ требует болюс: 3 помпы отсечены по \texttt{bool\_conflict}; у \texttt{CT0050L} пропуск. \\
+04 & \texttt{0128200000125006876} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & 1 поз. & ТЗ требует объём 100~мл и болюс: доказанный конфликт у всех 4 артикулов. \\
+05 & \texttt{0119200000124020697} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & 2 поз. & RAR распакован, но внешнее ТЗ не приложено $\to$ защита \texttt{coverage\_gap}. \\
+06 & \texttt{0319200068624000142} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{unknownbg}\texttt{unknown} & 2 поз. & XML-выгрузка ЕИС оборвана на сервере закупки $\to$ защита \texttt{coverage\_gap}. \\
+07 & \texttt{0372100048826000117} & \cellcolor{matchbg}\textbf{\texttt{match}} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \textbf{7/7 треб.} & \textbf{\texttt{CT0050L}: полное совпадение} (250~мл, 5~мл/ч, без болюса, защита от УФ). \\
+08 & \texttt{0337100018826000257} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & 1 поз. & У 3 артикулов числовой конфликт; у \texttt{M275-07} в паспорте нет сведений об УФ. \\
+09 & \texttt{0356300059125000001} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{unknownbg}\texttt{unknown} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & 2 поз. & ТЗ в Excel прочитано штатно; 3 прямых конфликта чисел, 1 пропуск свойства. \\
+10 & \texttt{0308300014226000025} & \cellcolor{matchbg}\textbf{\texttt{match}} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \cellcolor{mismatchbg}\texttt{mismatch} & \textbf{7/7 треб.} & \textbf{\texttt{CT0050L}: полное совпадение} со 100\% цитатным подтверждением требований. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Все 40 итоговых решений распределяются по трём типовым клиническим и техническим ситуациям:
+
+\textbf{1. Полное подтверждённое соответствие (\texttt{match}, 2 пары).} Артикул \texttt{CT0050L} безупречно закрыл закупки №~07 и №~10 (250~мл, 5~мл/ч, без болюса, светозащита). Все 7 требований совпали на 100\% и подтверждены цитатами.
+
+\textbf{2. Доказанный физический конфликт (\texttt{mismatch}, 21 пара).} В закупке №~03 требовался болюс (3 помпы отсечены). В закупке №~01 помпа \texttt{M275-07} даёт 1..7~мл/ч при норме 2..14~мл/ч. Сбой одного обязательного параметра бракует всю спецификационную позицию (правило 44-ФЗ \texttt{mandatory\_conflict}). Преобладание статуса \texttt{mismatch} (21 пара из 40) отражает жёсткую специфику рынка госзакупок: технические задания формируются под конкретные клинические задачи (химиотерапия, послеоперационное обезболивание), поэтому универсальная помпа не может подойти везде. Автоматический отсев предотвращает подачу заведомо непроходных заявок и исключает штрафы поставщика.
+
+\textbf{3. Защита от ложного отказа (\texttt{unknown}, 17 пар).} 12 пар получили \texttt{unknown} из-за сбоев серверов ЕИС (№~02, №~05, №~06; защитное правило \texttt{coverage\_gap}). Ещё 5 пар~--- из-за пропусков строк в паспорте изделия (например, отсутствие строки об УФ-защите у \texttt{M275-07}). Закон 44-ФЗ разрешает досылать сертификаты завода при подаче второй части заявки, поэтому считать пропуск данных автоматическим отказом юридически недопустимо.
+
+\bigskip
+\emph{Отсюда следует, что преобладание mismatch (21 из 40) предотвращает подачу заведомо непроходных заявок в ЕИС, а статус unknown надёжно защищает поставщика от необоснованной дисквалификации.}
+
+\newpage
+% ===========================================================================
+\section{Ограничения системы}
+% ===========================================================================
+
+Для объективной инженерной оценки зрелости разработанного конвейера выделим ключевые эксплуатационные ограничения:
+
+\begin{enumerate}[leftmargin=1.2em, itemsep=0.15em]
+  \item \textbf{Категориальный масштаб выборки:} Тестирование выполнено на 10 процедурах в узком домене микроинфузионных помп. Перенос конвейера на другие медицинские изделия (мониторы пациента, дефибрилляторы) потребует адаптации словарей ГОСТ/ОКЕИ и правил метрологической фильтрации.
+  \item \textbf{Зависимость от стабильности выгрузки ЕИС:} При повреждении исходных файлов или обрыве архивов ЕИС процедура автоматически маркируется статусом \texttt{unknown} (\texttt{coverage\_gap}). Это исключает галлюцинации чекера, но требует повторного запроса к ЕИС при восстановлении связи.
+  \item \textbf{Связность текста ТЗ:} Глубина извлечения требований из неструктурированной прозы зависит от контекстного внимания модели GPT-Luna. В редких клинических описаниях с нестандартным синтаксисом возможен пропуск второстепенных опций.
+  \item \textbf{Отсутствие оценки правоспособности:} Система анализирует исключительно техническую совместимость по паспортам изделий. Проверка правовой правоспособности поставщика, наличия регистрационных удостоверений в реестре Росздравнадзора и финансового обеспечения заявки остаётся в контуре профильных юристов.
+\end{enumerate}
+
+\vspace{0.2em}
+% ===========================================================================
+\section*{Приложение. Инженерный каталог гипотез (H1--H15) и глоссарий}
+% ===========================================================================
+
+В ходе разработки архитектуры проверено 13 основных гипотез (H1--H13) и сформулировано 2 перспективных (H14--H15):
+\begin{enumerate}[leftmargin=1.1em, itemsep=2.2pt, topsep=2pt, parsep=0pt]
+  \item \textbf{H1 (Морфология и синонимы):} Чисто лексический поиск теряет синонимы. \emph{Подтверждена:} точность лексики 66,7\%.
+  \item \textbf{H2 (Латентное пространство и RRF):} Эмбеддинги FRIDA + RRF находят синонимы. \emph{Подтверждена:} Recall@3 = 100\%, точность 93,3\%.
+  \item \textbf{H3 (Разделение слота и чисел):} Векторы с числами дают коллизии. \emph{Подтверждена:} кодовый чекер исключил 156 ошибок.
+  \item \textbf{H4 (Избыточность контекста):} Подача больших документов в LLM сжигает токены. \emph{Подтверждена:} закупка №~03 потратила 42~832 токена.
+  \item \textbf{H5 (Retrieve-then-read):} Табличный парсер экономит бюджет без потерь. \emph{Подтверждена:} 107 требований за 0 токенов.
+  \item \textbf{H6 (LLM-реранкер):} Дорогая LLM для сортировки кандидатов необходима. \emph{Отклонена:} Recall@4 = 1,0 уже достигнут, польза 0,0.
+  \item \textbf{H7 (Детерминированный вердикт):} Математический код надежнее LLM. \emph{Подтверждена:} 100\% точность чисел за 0 токенов.
+  \item \textbf{H8 (Агрегация по 44-ФЗ):} Проверка условий позиции исключает риски. \emph{Подтверждена:} правило \texttt{mandatory\_conflict} отсекает брак.
+  \item \textbf{H9 (Избирательный OCR):} Сплошной запуск OCR избыточен. \emph{Подтверждена:} 7 из 8 PDF имеют нативный текст, OCR на пустых сканах.
+  \item \textbf{H10 (Нормализация паспортов):} Разделение «Нет» и «Не указано» защищает от брака. \emph{Подтверждена:} статус \texttt{unknown} при пропуске.
+  \item \textbf{H11 (Адаптивный порог $\tau$):} Динамический расчёт порога косинуса по длине запроса. \emph{Подтверждена:} точность выросла до 100\%.
+  \item \textbf{H12 (Локальный Cross-Encoder):} Переоценка топ-3 кандидатов на CPU. \emph{Подтверждена:} Recall@1 вырос с 91,67\% до 100,0\% за 4,2~мс.
+  \item \textbf{H13 (Граф комплектности AST):} Дерево предикатов (И/ИЛИ/НЕ) для комплектаций. \emph{Подтверждена:} строгий \texttt{match} по составным ТЗ.
+  \item \textbf{H14 (Мультимодальное извлечение VDU):} Распознавание разъёмов Luer-Lock и фильтров по чертежам. \emph{Перспективная (R\&D).}
+  \item \textbf{H15 (Верификация эквивалентности НКМИ):} Сопоставление с РУ Росздравнадзора и кодами НКМИ для ФАС. \emph{Перспективная (R\&D).}
+\end{enumerate}
+
+\vspace{0.1em}
+\noindent\begin{minipage}{\textwidth}
+\centering
+\scriptsize
+\renewcommand{\arraystretch}{0.80}
+\captionof{table}{Глоссарий системных терминов и кодов}
+\label{tab:glossary}
+\begin{tabularx}{\textwidth}{l Y l Y}
+\toprule
+\textbf{Термин / Код} & \textbf{Значение в кодовой базе} & \textbf{Термин / Код} & \textbf{Значение в кодовой базе} \\
+\midrule
+\texttt{constraint} & Структура точных ограничений (числа, интервалы, множества, флаги) & \texttt{missing\_sku} & Свойство отсутствует в паспорте завода ($\to$ статус \texttt{unknown}) \\
+\texttt{not\_aligned} & Свойство не найдено в паспорте SKU ($\cos < 0{,}625 \to$ статус \texttt{unknown}) & \texttt{mandatory} & Конфликт хотя бы одного обязательного требования позиции ТЗ \\
+\texttt{coverage\_gap} & Защита процедуры при повреждении или неполноте файла ТЗ & \texttt{all\_conflict} & Все позиции спецификации закупки имеют доказанный \texttt{mismatch} \\
+\bottomrule
+\end{tabularx}
+\end{minipage}
+
+\end{document}

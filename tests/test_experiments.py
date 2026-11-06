@@ -102,11 +102,53 @@ def test_h6_rejects_reranker_for_small_sku_set():
 
 def test_blocked_hypotheses_name_their_precondition():
     blocked = ex.blocked()
-    assert set(blocked) == {"H2", "H5", "H7", "H8"}
+    assert set(blocked) == {"H5", "H7", "H8"}
     assert all("needs" in payload for payload in blocked.values())
 
 
-def test_h4_is_resolved():
+def test_h2_and_h4_are_resolved():
     resolved = ex.resolved()
-    assert "H4" in resolved
+    assert {"H2", "H4"} <= set(resolved)
+    assert resolved["H2"]["status"] == "resolved"
     assert resolved["H4"]["status"] == "resolved"
+
+
+def test_h2_embedding_alignment_recovers_semantic_synonym(tmp_path: Path):
+    from tenderai.embeddings import EmbeddingBatch
+
+    skus = [
+        _sku("Тип скорости", "Постоянная"),
+        _sku("Максимальный объём заполнения", "300", "мл"),
+    ]
+    reqs = [
+        _req("r_speed_ctrl", "Регулирование скорости инфузии", "нет"),
+        _req("r_nom_fill", "Номинальный объем заполнения", "≥ 300 и ≤ 399", "мл"),
+    ]
+    corpus = Corpus(
+        dataset=Path("mem"),
+        records=[],
+        skus=skus,
+        by_sku={"S1": skus},
+        documents=[],
+        requirements=reqs,
+    )
+    batch = EmbeddingBatch(
+        model="mock-frida",
+        dimension=2,
+        sku_vectors={
+            skus[0].characteristic_id: [1.0, 0.0],
+            skus[1].characteristic_id: [0.0, 1.0],
+        },
+        requirement_vectors={
+            "r_speed_ctrl": [0.9, 0.4359],
+            "r_nom_fill": [0.1, 0.995],
+        },
+        sku_inputs={c.characteristic_id: c.name for c in skus},
+        requirement_inputs={r.requirement_id: r.name for r in reqs},
+        duration_ms=1,
+        cache="hit",
+    )
+    result = ex.h2_embedding_alignment(corpus, held_out_path=tmp_path / "none.json", batch=batch)
+    assert result["corpus"]["lexical"]["status_distribution"].get("match", 0) == 1  # false match on max fill!
+    assert result["corpus"]["hybrid_rrf"]["status_distribution"] == {"match": 1, "unknown": 1}
+    assert result["verdict"] == "keep_hybrid_rrf"

@@ -13,6 +13,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=8.0"]
 luna = ["cursor-sdk>=1.2"]
+embed = ["sentence-transformers>=3.0"]
 
 [project.scripts]
 tenderai = "tenderai.cli:main"

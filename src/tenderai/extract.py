@@ -1,12 +1,17 @@
-"""Pull text and tables out of a file. OCR is intentionally absent."""
+"""Pull text and tables out of a file, with per-file gated OCR (H9) and RAR unpacking."""
 
 from __future__ import annotations
 
+import hashlib
+import io
+import shutil
 import subprocess
+import tempfile
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from tenderai.inventory import FileRecord
+from tenderai.inventory import FileRecord, detect_format
+from tenderai.ocr import ocr_pdf
 
 
 @dataclass
@@ -28,9 +33,19 @@ class Document:
     error: str | None = None
     text: str = ""
     tables: list[Table] = field(default_factory=list)
+    inner_xmls: list[tuple[str, str]] = field(default_factory=list)
+    ocr_used: bool = False
+    ocr_ms: int = 0
+    ocr_cache: str = "skip"
 
 
-def extract_document(dataset: Path, record: FileRecord) -> Document:
+def extract_document(
+    dataset: Path,
+    record: FileRecord,
+    *,
+    enable_ocr: bool = True,
+    cache_root: Path | None = None,
+) -> Document:
     path = dataset / record.path
     try:
         if record.detected_format == "xlsx":
@@ -44,8 +59,20 @@ def extract_document(dataset: Path, record: FileRecord) -> Document:
             return Document(record, "ok", text=text, tables=tables)
         if record.detected_format == "pdf":
             text = _pdf(path)
-            status = "ok" if text.strip() else "empty_text"
-            return Document(record, status, text=text, error=None if text.strip() else "pdf_text_layer_empty")
+            if text.strip():
+                return Document(record, "ok", text=text)
+            if enable_ocr:
+                ocr_text, ocr_ms, ocr_cache = ocr_pdf(path, record.sha256, cache_root=cache_root)
+                if ocr_text.strip():
+                    return Document(
+                        record,
+                        "ok",
+                        text=ocr_text,
+                        ocr_used=True,
+                        ocr_ms=ocr_ms,
+                        ocr_cache=ocr_cache,
+                    )
+            return Document(record, "empty_text", text="", error="pdf_text_layer_empty")
         if record.detected_format == "xml":
             return Document(record, "ok", text=_xml(path))
         if record.detected_format == "txt":
@@ -54,12 +81,82 @@ def extract_document(dataset: Path, record: FileRecord) -> Document:
             text = _doc(path)
             return Document(record, "ok", text=text)
         if record.detected_format == "error_json":
-            return Document(record, "gap", error="saved_error_response", text=path.read_text(encoding="utf-8", errors="replace"))
+            return Document(
+                record,
+                "gap",
+                error="saved_error_response",
+                text=path.read_text(encoding="utf-8", errors="replace"),
+            )
         if record.detected_format == "rar":
-            return Document(record, "gap", error="rar_not_unpacked")
+            return _rar(path, record, enable_ocr=enable_ocr, cache_root=cache_root)
         return Document(record, "gap", error=f"unsupported:{record.detected_format}")
     except Exception as exc:  # a broken file must not drop the tender
         return Document(record, "error", error=f"{type(exc).__name__}: {exc}")
+
+
+def _rar(
+    path: Path,
+    record: FileRecord,
+    *,
+    enable_ocr: bool,
+    cache_root: Path | None,
+) -> Document:
+    if shutil.which("bsdtar") is None:
+        return Document(record, "gap", error="rar_not_unpacked")
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_dir = Path(tmp)
+        completed = subprocess.run(
+            ["bsdtar", "-xf", str(path), "-C", str(tmp_dir)],
+            check=False,
+            capture_output=True,
+            timeout=60,
+        )
+        if completed.returncode != 0:
+            err = completed.stderr.decode("utf-8", errors="replace").strip()[:300]
+            return Document(record, "gap", error=f"rar_unpack_failed:{err}")
+
+        texts: list[str] = []
+        tables: list[Table] = []
+        inner_xmls: list[tuple[str, str]] = []
+        ocr_used = False
+        ocr_ms = 0
+        for inner_path in sorted(tmp_dir.rglob("*")):
+            if not inner_path.is_file() or inner_path.name == ".DS_Store":
+                continue
+            data = inner_path.read_bytes()
+            rel = inner_path.relative_to(tmp_dir).as_posix()
+            fmt = detect_format(data)
+            inner_rec = FileRecord(
+                path=rel,
+                sha256=hashlib.sha256(data).hexdigest(),
+                bytes=len(data),
+                extension=inner_path.suffix.lower().lstrip("."),
+                detected_format=fmt,
+                tender_id=record.tender_id,
+                sku_id=record.sku_id,
+                role=record.role,
+            )
+            inner_doc = extract_document(
+                tmp_dir, inner_rec, enable_ocr=enable_ocr, cache_root=cache_root
+            )
+            if inner_doc.text.strip():
+                texts.append(f"[archive:{rel}]\n{inner_doc.text}")
+            for table in inner_doc.tables:
+                tables.append(Table(sheet=f"{inner_path.name}:{table.sheet}", rows=table.rows))
+            if fmt == "xml":
+                inner_xmls.append((rel, data.decode("utf-8", errors="replace")))
+            if inner_doc.ocr_used:
+                ocr_used = True
+                ocr_ms += inner_doc.ocr_ms
+        return Document(
+            record,
+            "ok",
+            text="\n\n".join(texts),
+            tables=tables,
+            inner_xmls=inner_xmls,
+            ocr_used=ocr_used,
+            ocr_ms=ocr_ms,
+        )
 
 
 def _tables_text(tables: list[Table]) -> str:
@@ -73,7 +170,9 @@ def _tables_text(tables: list[Table]) -> str:
 def _xlsx_tables(path: Path) -> list[Table]:
     import openpyxl
 
-    workbook = openpyxl.load_workbook(path, data_only=True, read_only=True)
+    # Pass BytesIO so openpyxl does not reject genuine XLSX archives whose
+    # filename ends with .xml or .pdf (e.g. tender 09's 02_Извещение.xml).
+    workbook = openpyxl.load_workbook(io.BytesIO(path.read_bytes()), data_only=True, read_only=True)
     tables: list[Table] = []
     try:
         for sheet in workbook.worksheets:
