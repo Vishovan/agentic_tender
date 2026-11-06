@@ -1,0 +1,50 @@
+[
+  {
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  }
+]

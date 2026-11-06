@@ -1,0 +1,1779 @@
+[
+  {
+    "requirement_id": "f296e706c246",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Объем заполнения",
+    "raw_text": ">= 100 <= 124",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 100.0,
+      "high": 124.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Объем заполнения: >= 100 <= 124 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "f9a6c2d1dc2f",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "df93c2725b6d",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "48c9e878d00b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Регулирование скорости инфузии: Да."
+    }
+  },
+  {
+    "requirement_id": "956e05e58797",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "6201ec911e15",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "645e796963e0",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "2; 4; 6;\n8",
+    "mandatory": true,
+    "constraint": {
+      "kind": "set",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [
+        2.0,
+        4.0,
+        6.0,
+        8.0
+      ],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Скорость инфузии, мл/час: 2; 4; 6; 8."
+    }
+  },
+  {
+    "requirement_id": "79b396b9e6ec",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Количество режимов скорости потока",
+    "raw_text": ">= 4",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 4.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Количество режимов скорости потока: >= 4 шт."
+    }
+  },
+  {
+    "requirement_id": "f2345a0fffed",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "7207a7fe4f53",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Инфузионный фильтр, мкм",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "2eac3e1e85ca",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Шаг регулировки скорости потока, мл/ч",
+    "raw_text": "2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Шаг регулировки скорости потока, мл/ч: 2."
+    }
+  },
+  {
+    "requirement_id": "6828c731aa90",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "1. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "54ab47df5b9b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Объем заполнения",
+    "raw_text": ">= 100 <= 124",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 100.0,
+      "high": 124.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Объем заполнения: >= 100 <= 124 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "c238f32887c9",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "fce57c0cdb43",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "f52847f92e84",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Регулирование скорости инфузии: Нет."
+    }
+  },
+  {
+    "requirement_id": "97c1f7c29a93",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "6955a1a403cb",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "fd3f1bfb2263",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Скорость инфузии, мл/час: 2."
+    }
+  },
+  {
+    "requirement_id": "843e03a8ce50",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "094c5902671c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Инфузионный фильтр, мкм",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "37e4353dbb2b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "2. Насос инфузионный эластомерный — объем заполнения >= 100 <= 124 см[3*];^мл.",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "d65dfb20ec4a",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Объем заполнения",
+    "raw_text": ">= 250 <= 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Объем заполнения: >= 250 <= 299 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "c609c6a51dac",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "f9f2f20ca34b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "f5c07ff28f4f",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Регулирование скорости инфузии: Нет."
+    }
+  },
+  {
+    "requirement_id": "b0520f375559",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "c310e768b83d",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "a5d691ca4d42",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "5",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 5.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Скорость инфузии, мл/час: 5."
+    }
+  },
+  {
+    "requirement_id": "96874f2b6f94",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "8f9e8589a6c5",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Инфузионный фильтр, мкм",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "722c99994db7",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "3. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "1361a2a4b13c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Объем заполнения",
+    "raw_text": ">= 250 <= 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Объем заполнения: >= 250 <= 299 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "db97d266f0e5",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "c4a36f4f7a62",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "cd0b36cb5f22",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Регулирование скорости инфузии: Да."
+    }
+  },
+  {
+    "requirement_id": "83c468a27d65",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "1d6d66b72025",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "c72748cd2312",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "2; 4; 6;\n8",
+    "mandatory": true,
+    "constraint": {
+      "kind": "set",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [
+        2.0,
+        4.0,
+        6.0,
+        8.0
+      ],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Скорость инфузии, мл/час: 2; 4; 6; 8."
+    }
+  },
+  {
+    "requirement_id": "f7a90b6405d9",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Количество режимов скорости потока",
+    "raw_text": ">= 4",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 4.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Количество режимов скорости потока: >= 4 шт."
+    }
+  },
+  {
+    "requirement_id": "58a3744b8348",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "7d650d4a6753",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Инфузионный фильтр, мкм",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "3e50d3cd2a9c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Шаг регулировки скорости потока, мл/ч",
+    "raw_text": "2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Шаг регулировки скорости потока, мл/ч: 2."
+    }
+  },
+  {
+    "requirement_id": "9fa498183360",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "4. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "dcdaf633621e",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Объем заполнения",
+    "raw_text": ">= 250 <= 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Объем заполнения: >= 250 <= 299 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "9113cc97ad48",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "13fff26ea62d",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "926b31fd8ca2",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Регулирование скорости инфузии: Нет."
+    }
+  },
+  {
+    "requirement_id": "e105b13f5453",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "6c2ac035b119",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "0b480c9939cb",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "5",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 5.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Скорость инфузии, мл/час: 5."
+    }
+  },
+  {
+    "requirement_id": "9dcbb5463313",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "14d334d2a43d",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Инфузионный фильтр, мкм",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "d161fa4c81c5",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "5. Насос инфузионный эластомерный — объем заполнения >= 250 <= 299 см[3*];^мл.",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "df9cc808d32c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Объем заполнения",
+    "raw_text": ">= 400 <= 499",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 400.0,
+      "high": 499.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Объем заполнения: >= 400 <= 499 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "334c4d836949",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "58a683411ddc",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "7f3703fd7ce3",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Регулирование скорости инфузии: Да."
+    }
+  },
+  {
+    "requirement_id": "c5901f0ff020",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "3bee768df681",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "98b07195c309",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "12; 2;\n13; 3; 14; 4; 5; 6; 7; 8; 10",
+    "mandatory": true,
+    "constraint": {
+      "kind": "set",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [
+        12.0,
+        2.0,
+        13.0,
+        3.0,
+        14.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        10.0
+      ],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Скорость инфузии, мл/час: 12; 2; 13; 3; 14; 4; 5; 6; 7; 8; 10."
+    }
+  },
+  {
+    "requirement_id": "e92127b7f13c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Количество режимов скорости потока",
+    "raw_text": ">= 4",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 4.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Количество режимов скорости потока: >= 4 шт."
+    }
+  },
+  {
+    "requirement_id": "70ac4da235bf",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "3890f64eead7",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Инфузионный фильтр, мкм",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "bb452330ee8f",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "position_title": "6. Насос инфузионный эластомерный — объем заполнения >= 400 <= 499 см[3*];^мл.",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/9",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  }
+]

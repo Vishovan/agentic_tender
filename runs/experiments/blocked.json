@@ -1,0 +1,17 @@
+{
+  "H5": {
+    "question": "Retrieve-then-read cuts tokens without losing recall.",
+    "status": "feasible_not_run",
+    "needs": "GPT-Luna arm now wired (Cursor SDK); compare full-doc vs top-k chunk input tokens on 02/03 where the source is large (03 cost 42.8k input tokens on the full doc)."
+  },
+  "H7": {
+    "question": "Code verdict is no worse than an LLM verdict and cheaper.",
+    "status": "ready_needs_luna_key",
+    "needs": "Gold slice reviewed; needs live CURSOR_API_KEY to score GPT-Luna verdicts vs check_constraints."
+  },
+  "H8": {
+    "question": "A code-first cascade holds quality at a fraction of the tokens.",
+    "status": "ready_needs_luna_key",
+    "needs": "Gold slice reviewed; needs live CURSOR_API_KEY to run GPT-Luna on unknown pairs only."
+  }
+}

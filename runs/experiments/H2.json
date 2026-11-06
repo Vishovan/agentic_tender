@@ -1,0 +1,846 @@
+{
+  "question": "Dense FRIDA embeddings + RRF hybrid vs lexical characteristic alignment.",
+  "encoder": {
+    "model": "ai-forever/FRIDA",
+    "dimension": 1536,
+    "query_prefix": "search_query: Инфузионная помпа — <name[, unit][: text_value]>",
+    "document_prefix": "search_document: Инфузионная помпа — <name[, unit][: text_value]>",
+    "encoding_unit": "characteristic_slot (numbers, ranges, sets and booleans excluded from vector and verified in Constraint)",
+    "dense_threshold": 0.625,
+    "rrf_k": 60
+  },
+  "held_out": {
+    "lexical": {
+      "search_unit": "sku_characteristic",
+      "avg_candidate_characteristics_per_sku": 34.2,
+      "total_pairs": 15,
+      "positive_target_pairs": 12,
+      "absent_target_pairs": 3,
+      "recall_at_1": 0.8333,
+      "recall_at_3": 0.8333,
+      "alignment_accuracy": 0.6667,
+      "alignment_ok_count": 10,
+      "absent_abstention_accuracy": 0.0,
+      "not_aligned_count": 1,
+      "not_aligned_rate": 0.0667,
+      "status_accuracy": 0.8667,
+      "macro_f1": 0.869,
+      "match_precision": 0.8571,
+      "verified_match_precision": 0.7143,
+      "false_matches": 1,
+      "per_class": {
+        "match": {
+          "precision": 0.8571,
+          "recall": 0.8571,
+          "f1": 0.8571,
+          "support": 7
+        },
+        "mismatch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "unknown": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 4
+        }
+      },
+      "confusion_matrix": {
+        "match": {
+          "match": 6,
+          "mismatch": 0,
+          "unknown": 1
+        },
+        "mismatch": {
+          "match": 0,
+          "mismatch": 4,
+          "unknown": 0
+        },
+        "unknown": {
+          "match": 1,
+          "mismatch": 0,
+          "unknown": 3
+        }
+      }
+    },
+    "dense": {
+      "search_unit": "sku_characteristic",
+      "avg_candidate_characteristics_per_sku": 34.2,
+      "total_pairs": 15,
+      "positive_target_pairs": 12,
+      "absent_target_pairs": 3,
+      "recall_at_1": 0.9167,
+      "recall_at_3": 1.0,
+      "alignment_accuracy": 0.8667,
+      "alignment_ok_count": 13,
+      "absent_abstention_accuracy": 0.6667,
+      "not_aligned_count": 3,
+      "not_aligned_rate": 0.2,
+      "status_accuracy": 0.9333,
+      "macro_f1": 0.9373,
+      "match_precision": 1.0,
+      "verified_match_precision": 1.0,
+      "false_matches": 0,
+      "per_class": {
+        "match": {
+          "precision": 1.0,
+          "recall": 0.8571,
+          "f1": 0.9231,
+          "support": 7
+        },
+        "mismatch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "unknown": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8889,
+          "support": 4
+        }
+      },
+      "confusion_matrix": {
+        "match": {
+          "match": 6,
+          "mismatch": 0,
+          "unknown": 1
+        },
+        "mismatch": {
+          "match": 0,
+          "mismatch": 4,
+          "unknown": 0
+        },
+        "unknown": {
+          "match": 0,
+          "mismatch": 0,
+          "unknown": 4
+        }
+      }
+    },
+    "hybrid_rrf": {
+      "search_unit": "sku_characteristic",
+      "avg_candidate_characteristics_per_sku": 34.2,
+      "total_pairs": 15,
+      "positive_target_pairs": 12,
+      "absent_target_pairs": 3,
+      "recall_at_1": 0.9167,
+      "recall_at_3": 1.0,
+      "alignment_accuracy": 0.9333,
+      "alignment_ok_count": 14,
+      "absent_abstention_accuracy": 1.0,
+      "not_aligned_count": 4,
+      "not_aligned_rate": 0.2667,
+      "status_accuracy": 0.9333,
+      "macro_f1": 0.9373,
+      "match_precision": 1.0,
+      "verified_match_precision": 1.0,
+      "false_matches": 0,
+      "per_class": {
+        "match": {
+          "precision": 1.0,
+          "recall": 0.8571,
+          "f1": 0.9231,
+          "support": 7
+        },
+        "mismatch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 4
+        },
+        "unknown": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.8889,
+          "support": 4
+        }
+      },
+      "confusion_matrix": {
+        "match": {
+          "match": 6,
+          "mismatch": 0,
+          "unknown": 1
+        },
+        "mismatch": {
+          "match": 0,
+          "mismatch": 4,
+          "unknown": 0
+        },
+        "unknown": {
+          "match": 0,
+          "mismatch": 0,
+          "unknown": 4
+        }
+      }
+    }
+  },
+  "held_out_pairs": [
+    {
+      "id": "G01",
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Болюс: Нет",
+      "gold_status": "mismatch",
+      "correct_characteristic": "Болюс",
+      "arms": {
+        "lexical": {
+          "chosen": "Болюс = Да",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "bool_conflict"
+        },
+        "dense": {
+          "chosen": "Болюс = Да",
+          "score": 0.8161,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "bool_conflict"
+        },
+        "hybrid_rrf": {
+          "chosen": "Болюс = Да",
+          "score": 0.8161,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "bool_conflict"
+        }
+      }
+    },
+    {
+      "id": "G02",
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Болюс: Нет",
+      "gold_status": "match",
+      "correct_characteristic": "Болюс",
+      "arms": {
+        "lexical": {
+          "chosen": "Болюс = Нет",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        },
+        "dense": {
+          "chosen": "Болюс = Нет",
+          "score": 0.8161,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        },
+        "hybrid_rrf": {
+          "chosen": "Болюс = Нет",
+          "score": 0.8161,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        }
+      }
+    },
+    {
+      "id": "G03",
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Скорость инфузии, мл/час: 5",
+      "gold_status": "match",
+      "correct_characteristic": "Настройки скорости",
+      "arms": {
+        "lexical": {
+          "chosen": "Настройки скорости = 5",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "number_ok"
+        },
+        "dense": {
+          "chosen": "Настройки скорости = 5",
+          "score": 0.7678,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "number_ok"
+        },
+        "hybrid_rrf": {
+          "chosen": "Настройки скорости = 5",
+          "score": 0.7678,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "number_ok"
+        }
+      }
+    },
+    {
+      "id": "G04",
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "Скорость инфузии, мл/час: 5",
+      "gold_status": "match",
+      "correct_characteristic": "набор скоростей",
+      "arms": {
+        "lexical": {
+          "chosen": "Настройки скорости = 0 / 1 / 2 / 3 / 4 / 5 / 6 / 7",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "value_in_sku_set"
+        },
+        "dense": {
+          "chosen": "Настройки скорости = 0 / 1 / 2 / 3 / 4 / 5 / 6 / 7",
+          "score": 0.7678,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "value_in_sku_set"
+        },
+        "hybrid_rrf": {
+          "chosen": "Настройки скорости = 0 / 1 / 2 / 3 / 4 / 5 / 6 / 7",
+          "score": 0.7678,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "value_in_sku_set"
+        }
+      }
+    },
+    {
+      "id": "G05",
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Скорость инфузии, мл/час: 5",
+      "gold_status": "mismatch",
+      "correct_characteristic": "набор скоростей",
+      "arms": {
+        "lexical": {
+          "chosen": "Настройки скорости = 2 / 4 / 6 / 8 / 10 / 12 / 14",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "value_not_in_sku_set"
+        },
+        "dense": {
+          "chosen": "Настройки скорости = 2 / 4 / 6 / 8 / 10 / 12 / 14",
+          "score": 0.7678,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "value_not_in_sku_set"
+        },
+        "hybrid_rrf": {
+          "chosen": "Настройки скорости = 2 / 4 / 6 / 8 / 10 / 12 / 14",
+          "score": 0.7678,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "value_not_in_sku_set"
+        }
+      }
+    },
+    {
+      "id": "G06",
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Номинальный объем резервуара: ≥ 100 и ≤ 124",
+      "gold_status": "mismatch",
+      "correct_characteristic": "Номинальный объём резервуара",
+      "arms": {
+        "lexical": {
+          "chosen": "Номинальный объём резервуара = 250",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "point_outside_range"
+        },
+        "dense": {
+          "chosen": "Номинальный объём резервуара = 250",
+          "score": 0.8359,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "point_outside_range"
+        },
+        "hybrid_rrf": {
+          "chosen": "Номинальный объём резервуара = 250",
+          "score": 0.8359,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "point_outside_range"
+        }
+      }
+    },
+    {
+      "id": "G07",
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "Защита от УФ-лучей: Да",
+      "gold_status": "unknown",
+      "correct_characteristic": "Защита от УФ",
+      "arms": {
+        "lexical": {
+          "chosen": "Защита от УФ = Не указано",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "missing_sku_value"
+        },
+        "dense": {
+          "chosen": "Защита от УФ = Не указано",
+          "score": 0.8156,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "missing_sku_value"
+        },
+        "hybrid_rrf": {
+          "chosen": "Защита от УФ = Не указано",
+          "score": 0.8156,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "missing_sku_value"
+        }
+      }
+    },
+    {
+      "id": "G08",
+      "tender_id": "0128200000125006876",
+      "sku_id": "CT0050L",
+      "requirement": "Упаковка индивидуальная стерильная: соответствие",
+      "gold_status": "unknown",
+      "correct_characteristic": null,
+      "arms": {
+        "lexical": {
+          "chosen": "Стерильность = Да",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": false,
+          "status": "unknown",
+          "reason": "requirement_unparsed"
+        },
+        "dense": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "not_aligned"
+        },
+        "hybrid_rrf": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "not_aligned"
+        }
+      }
+    },
+    {
+      "id": "G09",
+      "tender_id": "0128200000125006876",
+      "sku_id": "CT0050L",
+      "requirement": "Система блокировки болюса: Нет",
+      "gold_status": "match",
+      "correct_characteristic": "Наличие системы блокировки болюса",
+      "arms": {
+        "lexical": {
+          "chosen": "Наличие системы блокировки болюса = Нет",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        },
+        "dense": {
+          "chosen": "Наличие системы блокировки болюса = Нет",
+          "score": 0.7385,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        },
+        "hybrid_rrf": {
+          "chosen": "Наличие системы блокировки болюса = Нет",
+          "score": 0.7385,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        }
+      }
+    },
+    {
+      "id": "G10",
+      "tender_id": "0372100048826000117",
+      "sku_id": "CT0050L",
+      "requirement": "Болюс: Нет",
+      "gold_status": "match",
+      "correct_characteristic": "Болюс",
+      "arms": {
+        "lexical": {
+          "chosen": "Болюс = Нет",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        },
+        "dense": {
+          "chosen": "Болюс = Нет",
+          "score": 0.8161,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        },
+        "hybrid_rrf": {
+          "chosen": "Болюс = Нет",
+          "score": 0.8161,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_equal"
+        }
+      }
+    },
+    {
+      "id": "G11",
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Номинальный объем заполнения: ≥ 300 и ≤ 399",
+      "gold_status": "unknown",
+      "correct_characteristic": "номинальный объём заполнения, не максимальный",
+      "arms": {
+        "lexical": {
+          "chosen": "Максимальный объём заполнения = 300",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": false,
+          "status": "match",
+          "reason": "point_inside_range"
+        },
+        "dense": {
+          "chosen": "Допустимый объём заполнения = Не указано",
+          "score": 0.7683,
+          "method": "dense",
+          "alignment_ok": false,
+          "status": "unknown",
+          "reason": "missing_sku_value"
+        },
+        "hybrid_rrf": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "not_aligned"
+        }
+      }
+    },
+    {
+      "id": "G12",
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "gold_status": "match",
+      "correct_characteristic": "Тип скорости = Постоянная",
+      "arms": {
+        "lexical": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": false,
+          "status": "unknown",
+          "reason": "not_aligned"
+        },
+        "dense": {
+          "chosen": "Тип скорости = Постоянная",
+          "score": 0.636,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_text_compatible"
+        },
+        "hybrid_rrf": {
+          "chosen": "Тип скорости = Постоянная",
+          "score": 0.636,
+          "method": "rrf_dense",
+          "alignment_ok": true,
+          "status": "match",
+          "reason": "bool_text_compatible"
+        }
+      }
+    },
+    {
+      "id": "G13",
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Механизм, контролирующий точность подачи раствора, и обеспечивающий гарантию точности инфузии при заполнении резервуара от 50% от объема резервуара: Наличие",
+      "gold_status": "unknown",
+      "correct_characteristic": null,
+      "arms": {
+        "lexical": {
+          "chosen": "Номинальный объём резервуара = 250",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": false,
+          "status": "unknown",
+          "reason": "unit_incompatible"
+        },
+        "dense": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "not_aligned"
+        },
+        "hybrid_rrf": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": true,
+          "status": "unknown",
+          "reason": "not_aligned"
+        }
+      }
+    },
+    {
+      "id": "G14",
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "7-мь вариантов выбора скорости с возможностью немедленной остановки инфузии (режим \"0\"): Наличие",
+      "gold_status": "match",
+      "correct_characteristic": "набор скоростей и наличие режима 0",
+      "arms": {
+        "lexical": {
+          "chosen": "Тип скорости = Регулируемая",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": false,
+          "status": "match",
+          "reason": "bool_text_compatible"
+        },
+        "dense": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": false,
+          "status": "unknown",
+          "reason": "not_aligned"
+        },
+        "hybrid_rrf": {
+          "chosen": null,
+          "score": null,
+          "method": null,
+          "alignment_ok": false,
+          "status": "unknown",
+          "reason": "not_aligned"
+        }
+      }
+    },
+    {
+      "id": "G15",
+      "tender_id": "0373200087824002359",
+      "sku_id": "MS5248M",
+      "requirement": "Болюс: Нет",
+      "gold_status": "mismatch",
+      "correct_characteristic": "Болюс",
+      "arms": {
+        "lexical": {
+          "chosen": "Болюс = Да",
+          "score": 1.0,
+          "method": "canon",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "bool_conflict"
+        },
+        "dense": {
+          "chosen": "Болюс = Да",
+          "score": 0.8161,
+          "method": "dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "bool_conflict"
+        },
+        "hybrid_rrf": {
+          "chosen": "Болюс = Да",
+          "score": 0.8161,
+          "method": "rrf_lex_dense",
+          "alignment_ok": true,
+          "status": "mismatch",
+          "reason": "bool_conflict"
+        }
+      }
+    }
+  ],
+  "corpus": {
+    "lexical": {
+      "pairs": 900,
+      "pairs_aligned": 493,
+      "not_aligned_count": 407,
+      "not_aligned_rate": 0.4522,
+      "pairs_decidable": 391,
+      "status_distribution": {
+        "unknown": 509,
+        "match": 235,
+        "mismatch": 156
+      },
+      "align_method_distribution": {
+        "canon": 480,
+        "none": 407,
+        "tokens": 13
+      }
+    },
+    "dense": {
+      "pairs": 900,
+      "pairs_aligned": 592,
+      "not_aligned_count": 308,
+      "not_aligned_rate": 0.3422,
+      "pairs_decidable": 456,
+      "status_distribution": {
+        "unknown": 444,
+        "match": 310,
+        "mismatch": 146
+      },
+      "align_method_distribution": {
+        "dense": 592,
+        "none": 308
+      }
+    },
+    "hybrid_rrf": {
+      "pairs": 900,
+      "pairs_aligned": 580,
+      "not_aligned_count": 320,
+      "not_aligned_rate": 0.3556,
+      "pairs_decidable": 445,
+      "status_distribution": {
+        "unknown": 455,
+        "match": 304,
+        "mismatch": 141
+      },
+      "align_method_distribution": {
+        "rrf_lex_dense": 403,
+        "none": 320,
+        "rrf_dense": 177
+      }
+    }
+  },
+  "examples_recovered_over_lexical": [
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "sku_characteristic": "Тип скорости = Постоянная [catalog.xlsx; Товары!E12]",
+      "cosine": 0.636,
+      "verdict": "match/bool_text_compatible"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "sku_characteristic": "Тип скорости = Регулируемая [catalog.xlsx; Товары!E7]",
+      "cosine": 0.739,
+      "verdict": "mismatch/bool_text_conflict"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Путь введения лекарственного препарата: Внутривенный, Подкожный, Эпидуральный",
+      "sku_characteristic": "Внутривенное введение = La perfusion avec l’Accufuser ABx® - CTx® peut être effectuée sur diverses voies d’abord : sous-cutanée, intraveineuse périphérique et centrale, intra-artérielle, perinerveuse, péridurale, ainsi que dans les sites opératoires. [wym_abx_ctx.pdf; PDF с. 3; I - PRESENTATION, final paragraph]",
+      "cosine": 0.668,
+      "verdict": "match/positive_attribute"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "requirement": "Путь введения лекарственного препарата: Внутривенный, Подкожный, Эпидуральный",
+      "sku_characteristic": "Внутривенное введение = Пути введения раствора: внутривенно, чрескожно, подкожно, внутриартериально, эпидурально, а также в область хирургического вмешательства (мягкие ткани, полости тела). [Accufuser_instruction_2020.pdf; PDF с. 1; ОПИСАНИЕ / пути введения]",
+      "cosine": 0.668,
+      "verdict": "match/positive_attribute"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Путь введения лекарственного препарата: Внутривенный, Подкожный, Эпидуральный",
+      "sku_characteristic": "Внутривенное введение = Пути введения раствора: внутривенно, чрескожно, подкожно, внутриартериально, эпидурально, а также в область хирургического вмешательства (мягкие ткани, полости тела). [Accufuser_instruction_2020.pdf; PDF с. 1; ОПИСАНИЕ / пути введения]",
+      "cosine": 0.668,
+      "verdict": "match/positive_attribute"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Резервуар, состоящий из эластичного химически инертного медицинского силикона, не содержит латекс и фталаты: Наличие",
+      "sku_characteristic": "Баллон из медицинского силикона = Réservoir : ballon en silicone médical (sans latex) [wym_abx_ctx.pdf; PDF с. 4; COMPOSITION / Réservoir]",
+      "cosine": 0.7037,
+      "verdict": "match/bool_equal"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "requirement": "Резервуар, состоящий из эластичного химически инертного медицинского силикона, не содержит латекс и фталаты: Наличие",
+      "sku_characteristic": "Материал инфузионного баллона = Медицинское изделие состоит из корпуса, силиконового резервуара, инфузионной линии, модуля переключения скоростей, порта для заполнения помпы, скользящего зажима, инфузионного фильтра, штырькового коннектора с гидрофобной заглушкой. [Accufuser_instruction_2020.pdf; PDF с. 1; ОПИСАНИЕ / состав]",
+      "cosine": 0.6494,
+      "verdict": "unknown/bool_text_unclear"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Резервуар, состоящий из эластичного химически инертного медицинского силикона, не содержит латекс и фталаты: Наличие",
+      "sku_characteristic": "Материал инфузионного баллона = Медицинское изделие состоит из корпуса, силиконового резервуара, инфузионной линии, модуля переключения скоростей, порта для заполнения помпы, скользящего зажима, инфузионного фильтра, штырькового коннектора с гидрофобной заглушкой. [Accufuser_instruction_2020.pdf; PDF с. 1; ОПИСАНИЕ / состав]",
+      "cosine": 0.6494,
+      "verdict": "unknown/bool_text_unclear"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "requirement": "Колпачок со встроенным воздушным фильтром на дистальном конце удлинительной линии: Наличие",
+      "sku_characteristic": "Воздушный фильтр дистальной заглушки = Во время «заполнения» наконечник с коннектора не снимается. С помощью гидрофобной мембраны синий наконечник пропускает воздух наружу и останавливает поток раствора. [Accufuser_instruction_2020.pdf; PDF с. 2; ПОРЯДОК РАБОТЫ / пункт 9, together with terminal connector diagrams]",
+      "cosine": 0.6441,
+      "verdict": "match/bool_equal"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Колпачок со встроенным воздушным фильтром на дистальном конце удлинительной линии: Наличие",
+      "sku_characteristic": "Воздушный фильтр дистальной заглушки = Во время «заполнения» наконечник с коннектора не снимается. С помощью гидрофобной мембраны синий наконечник пропускает воздух наружу и останавливает поток раствора. [Accufuser_instruction_2020.pdf; PDF с. 2; ПОРЯДОК РАБОТЫ / пункт 9, together with terminal connector diagrams]",
+      "cosine": 0.6441,
+      "verdict": "match/bool_equal"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Наклейка, бланк: Наличие",
+      "sku_characteristic": "Наклейка для данных пациента = 6.24. MS5248M - скорости инфузии: 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0 (мл/ч); объем болюса 5.0 (мл); время работы замка болюса 10,15,30 (мин); силиконовый резервуар 100 (мл) - 10 шт., Наклейка -10 шт., Инструкция по применению - 10 шт., Чехол для переноски (при необходимости, не более 10 шт.), Лента для крепления (при необходимости не более 10 шт.). [Accufuser_instruction_2020.pdf; PDF с. 18; Appendix item6.24, full kit list]",
+      "cosine": 0.7146,
+      "verdict": "match/bool_equal"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Стерилизация, окись этилена: Наличие",
+      "sku_characteristic": "Метод стерилизации = Mode de stérilisation : oxyde d’éthylène [wym_abx_ctx.pdf; PDF с. 4; III / Mode de stérilisation]",
+      "cosine": 0.8014,
+      "verdict": "unknown/bool_text_unclear"
+    }
+  ],
+  "verdict": "keep_hybrid_rrf",
+  "reading": "On the 15-pair reviewed gold slice, alignment accuracy rises from 0.6667 (lexical) to 0.8667 (FRIDA dense) and 0.9333 (hybrid RRF); Recall@3 reaches 1.0 vs 0.8333 lexical, downstream macro-F1 rises 0.869 -> 0.9373, and verified match precision rises 0.7143 -> 1.0 (G12 recovered as match, G11 false match eliminated, G08/G13 spurious alignments abstained)."
+}

@@ -1,0 +1,542 @@
+[
+  {
+    "requirement_id": "bd16718a30a7",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Болюс Нет"
+    }
+  },
+  {
+    "requirement_id": "a5a0b47dde15",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Защита от УФ-лучей Да"
+    }
+  },
+  {
+    "requirement_id": "f2dcaf34ce8e",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Объем заполнения",
+    "raw_text": "≥ 250  и  ≤ 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Объем заполнения ≥ 250 и ≤ 299 Кубический сантиметр;^миллилитр"
+    }
+  },
+  {
+    "requirement_id": "f925e2175f95",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Внутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Путь введения лекарственного препарата Внутривенный"
+    }
+  },
+  {
+    "requirement_id": "21aeed6f52f2",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Регулирование скорости инфузии Да"
+    }
+  },
+  {
+    "requirement_id": "cba73adaaecf",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Система блокировки болюса",
+    "raw_text": "нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Система блокировки болюса нет"
+    }
+  },
+  {
+    "requirement_id": "531c3b7dc788",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "5",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 5.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Скорость инфузии, мл/час 5"
+    }
+  },
+  {
+    "requirement_id": "b061b4a38e2d",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Резервуар не содержит латекс и фталаты",
+    "raw_text": "соответствие",
+    "mandatory": true,
+    "constraint": {
+      "kind": "reference",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "соответствие",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Резервуар не содержит латекс и фталаты соответствие"
+    }
+  },
+  {
+    "requirement_id": "ab70864a91a3",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Отверстие для заполнения резервуара находится на корпусе помпы с клапаном, препятствующим обратный ток препарата",
+    "raw_text": "соответствие",
+    "mandatory": true,
+    "constraint": {
+      "kind": "reference",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "соответствие",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Отверстие для заполнения резервуара находится на корпусе помпы с клапаном, препятствующим обратный ток препарата соответствие"
+    }
+  },
+  {
+    "requirement_id": "f7bfdff3c170",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Скорость потока откалибрована за счёт подбора эластомера и ограничителя потока жидкости",
+    "raw_text": "соответствие",
+    "mandatory": true,
+    "constraint": {
+      "kind": "reference",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "соответствие",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Скорость потока откалибрована за счёт подбора эластомера и ограничителя потока жидкости соответствие"
+    }
+  },
+  {
+    "requirement_id": "1e1d9ada30ab",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+    "position_title": "1. Насос инфузионный эластомерный — 50 штука",
+    "name": "Диаметр пор фильтра, встроенного в удлинительную линию",
+    "raw_text": "≤ 0,0012",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gt",
+      "value": 0.0012,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Диаметр пор фильтра, встроенного в удлинительную линию ≤ 0,0012 мм"
+    }
+  },
+  {
+    "requirement_id": "417b48d9c4cf",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Болюс Нет"
+    }
+  },
+  {
+    "requirement_id": "462a215f3267",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Защита от УФ-лучей Да"
+    }
+  },
+  {
+    "requirement_id": "d6df49d99f33",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Объем заполнения",
+    "raw_text": "≥ 250  и  ≤ 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Объем заполнения ≥ 250 и ≤ 299 Кубический сантиметр;^миллилитр"
+    }
+  },
+  {
+    "requirement_id": "c1b2f182894f",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Внутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Путь введения лекарственного препарата Внутривенный"
+    }
+  },
+  {
+    "requirement_id": "b4da608f2085",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Регулирование скорости инфузии Да"
+    }
+  },
+  {
+    "requirement_id": "23f3e04bb493",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Система блокировки болюса",
+    "raw_text": "нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Система блокировки болюса нет"
+    }
+  },
+  {
+    "requirement_id": "817531a80457",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Скорость инфузии, мл/час",
+    "raw_text": "5",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 5.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Скорость инфузии, мл/час 5"
+    }
+  },
+  {
+    "requirement_id": "b3efa0a940b6",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Цветовая кодировка скорости потока",
+    "raw_text": "соответствие",
+    "mandatory": true,
+    "constraint": {
+      "kind": "reference",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "соответствие",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Цветовая кодировка скорости потока соответствие"
+    }
+  },
+  {
+    "requirement_id": "5eb561299b6a",
+    "tender_id": "0319200068624000142",
+    "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+    "position_title": "2. Насос инфузионный эластомерный- 10 штука",
+    "name": "Эластичный резервуарный баллон выполнен из медицинского силикона, не содержит латекс и фталаты",
+    "raw_text": "соответствие",
+    "mandatory": true,
+    "constraint": {
+      "kind": "reference",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "соответствие",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/06_0319200068624000142/03_Описание объекта закупки.doc",
+      "locator": "page/?",
+      "quote": "Эластичный резервуарный баллон выполнен из медицинского силикона, не содержит латекс и фталаты соответствие"
+    }
+  }
+]

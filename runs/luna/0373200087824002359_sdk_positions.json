@@ -1,0 +1,146 @@
+[
+  {
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:1:1-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:2:2-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:3:3-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:4-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:5:5-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:6-насос-инфузионный-эластомерный-объем-заполнени",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  }
+]

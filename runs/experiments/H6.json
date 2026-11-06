@@ -1,0 +1,10 @@
+{
+  "question": "Alignment with a reranker vs without, over the full SKU set.",
+  "sku_count": 4,
+  "candidate_pool_per_requirement": 4,
+  "retrieval_fan_out": 4,
+  "recall_at_full_fan_out": 1.0,
+  "recall_headroom_for_reranker": 0.0,
+  "verdict": "reject_reranker",
+  "reading": "The pipeline already checks every requirement against all 4 SKUs, so retrieval recall is 1.0 by construction; a reranker reorders a set it cannot shrink below and adds tokens for zero recall headroom."
+}

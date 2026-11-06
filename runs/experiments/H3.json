@@ -1,0 +1,103 @@
+{
+  "question": "Status by closeness alone vs retrieve-then-code-check.",
+  "decidable_pairs": 391,
+  "pure_similarity_match_precision": 0.601,
+  "hybrid_match_precision": 1.0,
+  "false_matches_pure_would_emit": 156,
+  "false_matches_numeric": 72,
+  "false_matches_negation": 84,
+  "examples_close_but_incompatible": [
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Болюс: Нет",
+      "sku_characteristic": "Да [catalog.xlsx; Товары!H14]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "range_not_subset",
+      "requirement": "Номинальный объем заполнения: ≥ 300 и ≤ 399",
+      "sku_characteristic": "Следить, чтобы при заполнении помпы объем лекарственного средства был не менее минимального объема (50 %), указанного в таблице «Время инфузии». Не превышать максимальный объем заполнения резервуара (110 %). [Accufuser_instruction_2020.pdf; PDF с. 5; Flow factors table, Объем заполнения, recommendations column]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "range_not_subset",
+      "requirement": "Номинальный объем заполнения: ≥ 300 и ≤ 399",
+      "sku_characteristic": "Следить, чтобы при заполнении помпы объем лекарственного средства был не менее минимального объема (50 %), указанного в таблице «Время инфузии». Не превышать максимальный объем заполнения резервуара (110 %). [Accufuser_instruction_2020.pdf; PDF с. 5; Flow factors table, Объем заполнения, recommendations column]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "sku_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "sku_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Система блокировки болюса: нет",
+      "sku_characteristic": "6.24. MS5248M - скорости инфузии: 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0 (мл/ч); объем болюса 5.0 (мл); время работы замка болюса 10,15,30 (мин); силиконовый резервуар 100 (мл) [Accufuser_instruction_2020.pdf; PDF с. 18; Appendix variants, item 6.24]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "value_not_in_sku_set",
+      "requirement": "Скорость инфузии, мл/час: 5",
+      "sku_characteristic": "2 / 4 / 6 / 8 / 10 / 12 / 14 [catalog.xlsx; Товары!F14]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Болюс: да",
+      "sku_characteristic": "Изделия Accufuser ABx и Accufuser CTx обеспечивают непрерывную инфузию с постоянной скоростью потока. [Ву Янг_Инструкция по применению_ФСЗ 2011_10949.pdf; PDF с. 26; Печатная с. 25, тип изделия и схема CTx]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Болюс: да",
+      "sku_characteristic": "Нет [catalog.xlsx; Товары!H7]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "align_method": "canon",
+      "align_score": 1.0,
+      "reason": "bool_conflict",
+      "requirement": "Болюс: да",
+      "sku_characteristic": "C: Только непрерывная инфузия/Continuous [Accufuser_instruction_2020.pdf; PDF с. 4; Coding tables for M4C and M16C]"
+    }
+  ],
+  "verdict": "keep_hybrid",
+  "reading": "Pure closeness would call 156 close-but-incompatible pair(s) a match (precision 0.601); the code check holds precision at 1.0."
+}

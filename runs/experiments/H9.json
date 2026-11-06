@@ -1,0 +1,31 @@
+{
+  "question": "OCR everywhere vs OCR only where the text layer is empty.",
+  "pdfs_total": 8,
+  "pdfs_with_text_layer": 7,
+  "pdfs_empty_text_ocr_candidates": 1,
+  "ocr_candidate_files": [
+    "tenders/04_0128200000125006876/06_Другое.."
+  ],
+  "non_pdf_gaps_for_other_handlers": [
+    {
+      "path": "tenders/02_0373200087824002359/09_Электронный документ, полученный из внешней системы.docx",
+      "format": "error_json",
+      "status": "gap",
+      "error": "saved_error_response"
+    },
+    {
+      "path": "tenders/05_0119200000124020697/08_Электронный документ, полученный из внешней системы.docx",
+      "format": "error_json",
+      "status": "gap",
+      "error": "saved_error_response"
+    },
+    {
+      "path": "tenders/06_0319200068624000142/10_Электронный документ, полученный из внешней системы.xml",
+      "format": "error_json",
+      "status": "gap",
+      "error": "saved_error_response"
+    }
+  ],
+  "verdict": "gate_ocr_per_file",
+  "reading": "1 of 8 PDF(s) have an empty text layer, so OCR is a flag on those file(s), not a stage every document pays for."
+}

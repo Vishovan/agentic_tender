@@ -1,0 +1,224 @@
+{
+  "tender_id": "32514576235",
+  "arm": "gpt-luna + code checker",
+  "baseline_requirements_for_this_tender": 0,
+  "luna_requirements": 29,
+  "positions": 1,
+  "parsed_to_a_checkable_constraint": 29,
+  "requirement_kind_distribution": {
+    "number": 2,
+    "text": 27
+  },
+  "pairs": 116,
+  "pairs_decidable": 43,
+  "status_distribution": {
+    "match": 23,
+    "unknown": 73,
+    "mismatch": 20
+  },
+  "reason_distribution": {
+    "number_ok": 7,
+    "not_aligned": 70,
+    "positive_attribute": 16,
+    "negative_attribute": 12,
+    "missing_sku_value": 3,
+    "text_conflict": 8
+  },
+  "match_examples": [
+    {
+      "requirement_id": "2244c34e5f9a",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объем резервуара",
+      "sku_id": "CT0050L",
+      "status": "match",
+      "reason": "number_ok",
+      "align_method": "canon",
+      "requirement_kind": "number",
+      "requirement_quote": "Объем резервуара не менее 100 мл и не более 150 мл**",
+      "sku_characteristic": "250 [catalog.xlsx; Товары!C12]"
+    },
+    {
+      "requirement_id": "2244c34e5f9a",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объем резервуара",
+      "sku_id": "M275-07",
+      "status": "match",
+      "reason": "number_ok",
+      "align_method": "canon",
+      "requirement_kind": "number",
+      "requirement_quote": "Объем резервуара не менее 100 мл и не более 150 мл**",
+      "sku_characteristic": "275 [catalog.xlsx; Товары!C7]"
+    },
+    {
+      "requirement_id": "2244c34e5f9a",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объем резервуара",
+      "sku_id": "MC1248L",
+      "status": "match",
+      "reason": "number_ok",
+      "align_method": "canon",
+      "requirement_kind": "number",
+      "requirement_quote": "Объем резервуара не менее 100 мл и не более 150 мл**",
+      "sku_characteristic": "300 [catalog.xlsx; Товары!C16]"
+    },
+    {
+      "requirement_id": "2244c34e5f9a",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объем резервуара",
+      "sku_id": "MS5248M",
+      "status": "match",
+      "reason": "number_ok",
+      "align_method": "canon",
+      "requirement_kind": "number",
+      "requirement_quote": "Объем резервуара не менее 100 мл и не более 150 мл**",
+      "sku_characteristic": "100 [catalog.xlsx; Товары!C14]"
+    },
+    {
+      "requirement_id": "7c4fbfbf4fcc",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Регулируемая скорость",
+      "sku_id": "MC1248L",
+      "status": "match",
+      "reason": "positive_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Регулируемая скорость 0:2,0:4,0:6,0:8,0:10,0:12,0:14,0 мл/ч.*",
+      "sku_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]"
+    },
+    {
+      "requirement_id": "7c4fbfbf4fcc",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Регулируемая скорость",
+      "sku_id": "MS5248M",
+      "status": "match",
+      "reason": "positive_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Регулируемая скорость 0:2,0:4,0:6,0:8,0:10,0:12,0:14,0 мл/ч.*",
+      "sku_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]"
+    },
+    {
+      "requirement_id": "0e6c6b23112f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объём болюса",
+      "sku_id": "MS5248M",
+      "status": "match",
+      "reason": "positive_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Объём болюса 5 мл.",
+      "sku_characteristic": "Да [catalog.xlsx; Товары!H14]"
+    },
+    {
+      "requirement_id": "a3e6857b424f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Регулируемое время работы замка болюса",
+      "sku_id": "MS5248M",
+      "status": "match",
+      "reason": "positive_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Регулируемое время работы замка болюса - 0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\").",
+      "sku_characteristic": "Да [catalog.xlsx; Товары!H14]"
+    }
+  ],
+  "mismatch_examples": [
+    {
+      "requirement_id": "0e6c6b23112f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объём болюса",
+      "sku_id": "CT0050L",
+      "status": "mismatch",
+      "reason": "negative_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Объём болюса 5 мл.",
+      "sku_characteristic": "Изделия Accufuser ABx и Accufuser CTx обеспечивают непрерывную инфузию с постоянной скоростью потока. [Ву Янг_Инструкция по применению_ФСЗ 2011_10949.pdf; PDF с. 26; Печатная с. 25, тип изделия и схема CTx]"
+    },
+    {
+      "requirement_id": "0e6c6b23112f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объём болюса",
+      "sku_id": "M275-07",
+      "status": "mismatch",
+      "reason": "negative_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Объём болюса 5 мл.",
+      "sku_characteristic": "Нет [catalog.xlsx; Товары!H7]"
+    },
+    {
+      "requirement_id": "0e6c6b23112f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Объём болюса",
+      "sku_id": "MC1248L",
+      "status": "mismatch",
+      "reason": "negative_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Объём болюса 5 мл.",
+      "sku_characteristic": "C: Только непрерывная инфузия/Continuous [Accufuser_instruction_2020.pdf; PDF с. 4; Coding tables for M4C and M16C]"
+    },
+    {
+      "requirement_id": "a3e6857b424f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Регулируемое время работы замка болюса",
+      "sku_id": "CT0050L",
+      "status": "mismatch",
+      "reason": "negative_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Регулируемое время работы замка болюса - 0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\").",
+      "sku_characteristic": "Изделия Accufuser ABx и Accufuser CTx обеспечивают непрерывную инфузию с постоянной скоростью потока. [Ву Янг_Инструкция по применению_ФСЗ 2011_10949.pdf; PDF с. 26; Печатная с. 25, тип изделия и схема CTx]"
+    },
+    {
+      "requirement_id": "a3e6857b424f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Регулируемое время работы замка болюса",
+      "sku_id": "M275-07",
+      "status": "mismatch",
+      "reason": "negative_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Регулируемое время работы замка болюса - 0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\").",
+      "sku_characteristic": "Нет [catalog.xlsx; Товары!H7]"
+    },
+    {
+      "requirement_id": "a3e6857b424f",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Регулируемое время работы замка болюса",
+      "sku_id": "MC1248L",
+      "status": "mismatch",
+      "reason": "negative_attribute",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Регулируемое время работы замка болюса - 0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\").",
+      "sku_characteristic": "C: Только непрерывная инфузия/Continuous [Accufuser_instruction_2020.pdf; PDF с. 4; Coding tables for M4C and M16C]"
+    },
+    {
+      "requirement_id": "a61329d7f471",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Наличие 8-ми вариантов выбора скорости с возможностью немедленной остановки инфузии",
+      "sku_id": "CT0050L",
+      "status": "mismatch",
+      "reason": "text_conflict",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Наличие 8-ми вариантов выбора скорости с возможностью немедленной остановки инфузии (режим \"0\") значение не изменяемое *",
+      "sku_characteristic": "Постоянная [catalog.xlsx; Товары!E12]"
+    },
+    {
+      "requirement_id": "a61329d7f471",
+      "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+      "name": "Наличие 8-ми вариантов выбора скорости с возможностью немедленной остановки инфузии",
+      "sku_id": "M275-07",
+      "status": "mismatch",
+      "reason": "text_conflict",
+      "align_method": "canon",
+      "requirement_kind": "text",
+      "requirement_quote": "Наличие 8-ми вариантов выбора скорости с возможностью немедленной остановки инфузии (режим \"0\") значение не изменяемое *",
+      "sku_characteristic": "Регулируемая [catalog.xlsx; Товары!E7]"
+    }
+  ],
+  "note_usage": "GPT-Luna reached via Cursor subagent; per-call token/cost not exposed to the harness -> record as unavailable until a code-callable Luna endpoint is wired."
+}

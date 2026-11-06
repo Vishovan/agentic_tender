@@ -1,0 +1,231 @@
+{
+  "tender_id": "0319200068624000142",
+  "arm": "gpt-luna + code checker",
+  "baseline_requirements_for_this_tender": 0,
+  "luna_requirements": 20,
+  "positions": 2,
+  "parsed_to_a_checkable_constraint": 15,
+  "requirement_kind_distribution": {
+    "bool": 8,
+    "range": 2,
+    "text": 2,
+    "number": 3,
+    "reference": 5
+  },
+  "pairs": 80,
+  "pairs_decidable": 37,
+  "status_distribution": {
+    "match": 25,
+    "mismatch": 12,
+    "unknown": 43
+  },
+  "reason_distribution": {
+    "bool_equal": 18,
+    "bool_conflict": 4,
+    "missing_sku_value": 9,
+    "point_outside_range": 2,
+    "range_not_subset": 4,
+    "not_aligned": 26,
+    "number_ok": 3,
+    "value_in_sku_set": 4,
+    "value_not_in_sku_set": 2,
+    "requirement_unparsed": 8
+  },
+  "match_examples": [
+    {
+      "requirement_id": "bd16718a30a7",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Болюс",
+      "sku_id": "CT0050L",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Болюс Нет",
+      "sku_characteristic": "Изделия Accufuser ABx и Accufuser CTx обеспечивают непрерывную инфузию с постоянной скоростью потока. [Ву Янг_Инструкция по применению_ФСЗ 2011_10949.pdf; PDF с. 26; Печатная с. 25, тип изделия и схема CTx]"
+    },
+    {
+      "requirement_id": "bd16718a30a7",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Болюс",
+      "sku_id": "M275-07",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Болюс Нет",
+      "sku_characteristic": "Нет [catalog.xlsx; Товары!H7]"
+    },
+    {
+      "requirement_id": "bd16718a30a7",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Болюс",
+      "sku_id": "MC1248L",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Болюс Нет",
+      "sku_characteristic": "C: Только непрерывная инфузия/Continuous [Accufuser_instruction_2020.pdf; PDF с. 4; Coding tables for M4C and M16C]"
+    },
+    {
+      "requirement_id": "a5a0b47dde15",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Защита от УФ-лучей",
+      "sku_id": "CT0050L",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Защита от УФ-лучей Да",
+      "sku_characteristic": "Coque anti-UV graduée : polycarbonate rigide [wym_abx_ctx.pdf; PDF с. 4; III characteristics, item 2]"
+    },
+    {
+      "requirement_id": "a5a0b47dde15",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Защита от УФ-лучей",
+      "sku_id": "MS5248M",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Защита от УФ-лучей Да",
+      "sku_characteristic": "Gehäuse mit UV-Filter zum Schutz vor lichtempfindlichen Medikamenten [venner_m8s.pdf; PDF с. 2; IHRE VORTEILE]"
+    },
+    {
+      "requirement_id": "21aeed6f52f2",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Регулирование скорости инфузии",
+      "sku_id": "MC1248L",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Регулирование скорости инфузии Да",
+      "sku_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]"
+    },
+    {
+      "requirement_id": "21aeed6f52f2",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Регулирование скорости инфузии",
+      "sku_id": "MS5248M",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Регулирование скорости инфузии Да",
+      "sku_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]"
+    },
+    {
+      "requirement_id": "cba73adaaecf",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Система блокировки болюса",
+      "sku_id": "CT0050L",
+      "status": "match",
+      "reason": "bool_equal",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Система блокировки болюса нет",
+      "sku_characteristic": "Изделия Accufuser ABx и Accufuser CTx обеспечивают непрерывную инфузию с постоянной скоростью потока. [Ву Янг_Инструкция по применению_ФСЗ 2011_10949.pdf; PDF с. 26; Печатная с. 25, тип изделия и схема CTx]"
+    }
+  ],
+  "mismatch_examples": [
+    {
+      "requirement_id": "bd16718a30a7",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Болюс",
+      "sku_id": "MS5248M",
+      "status": "mismatch",
+      "reason": "bool_conflict",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Болюс Нет",
+      "sku_characteristic": "Да [catalog.xlsx; Товары!H14]"
+    },
+    {
+      "requirement_id": "f2dcaf34ce8e",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Объем заполнения",
+      "sku_id": "CT0050L",
+      "status": "mismatch",
+      "reason": "point_outside_range",
+      "align_method": "canon",
+      "requirement_kind": "range",
+      "requirement_quote": "Объем заполнения ≥ 250 и ≤ 299 Кубический сантиметр;^миллилитр",
+      "sku_characteristic": "2 jours | 240 ml | 250 ml | 300 ml | 5 | CT0050L | 12 [wym_abx_ctx.pdf; PDF с. 10; Gamme Couleur table (printed p8), exact reference row; duration / fill / nominal / maximum / flow / reference / units]"
+    },
+    {
+      "requirement_id": "f2dcaf34ce8e",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Объем заполнения",
+      "sku_id": "MC1248L",
+      "status": "mismatch",
+      "reason": "range_not_subset",
+      "align_method": "canon",
+      "requirement_kind": "range",
+      "requirement_quote": "Объем заполнения ≥ 250 и ≤ 299 Кубический сантиметр;^миллилитр",
+      "sku_characteristic": "Следить, чтобы при заполнении помпы объем лекарственного средства был не менее минимального объема (50 %), указанного в таблице «Время инфузии». Не превышать максимальный объем заполнения резервуара (110 %). [Accufuser_instruction_2020.pdf; PDF с. 5; Flow factors table, Объем заполнения, recommendations column]"
+    },
+    {
+      "requirement_id": "f2dcaf34ce8e",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Объем заполнения",
+      "sku_id": "MS5248M",
+      "status": "mismatch",
+      "reason": "range_not_subset",
+      "align_method": "canon",
+      "requirement_kind": "range",
+      "requirement_quote": "Объем заполнения ≥ 250 и ≤ 299 Кубический сантиметр;^миллилитр",
+      "sku_characteristic": "Следить, чтобы при заполнении помпы объем лекарственного средства был не менее минимального объема (50 %), указанного в таблице «Время инфузии». Не превышать максимальный объем заполнения резервуара (110 %). [Accufuser_instruction_2020.pdf; PDF с. 5; Flow factors table, Объем заполнения, recommendations column]"
+    },
+    {
+      "requirement_id": "cba73adaaecf",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Система блокировки болюса",
+      "sku_id": "MS5248M",
+      "status": "mismatch",
+      "reason": "bool_conflict",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Система блокировки болюса нет",
+      "sku_characteristic": "6.24. MS5248M - скорости инфузии: 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 14.0 (мл/ч); объем болюса 5.0 (мл); время работы замка болюса 10,15,30 (мин); силиконовый резервуар 100 (мл) [Accufuser_instruction_2020.pdf; PDF с. 18; Appendix variants, item 6.24]"
+    },
+    {
+      "requirement_id": "531c3b7dc788",
+      "position_id": "0319200068624000142:1:1-насос-инфузионный-эластомерный-50-штука",
+      "name": "Скорость инфузии, мл/час",
+      "sku_id": "MS5248M",
+      "status": "mismatch",
+      "reason": "value_not_in_sku_set",
+      "align_method": "canon",
+      "requirement_kind": "number",
+      "requirement_quote": "Скорость инфузии, мл/час 5",
+      "sku_characteristic": "2 / 4 / 6 / 8 / 10 / 12 / 14 [catalog.xlsx; Товары!F14]"
+    },
+    {
+      "requirement_id": "417b48d9c4cf",
+      "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+      "name": "Болюс",
+      "sku_id": "MS5248M",
+      "status": "mismatch",
+      "reason": "bool_conflict",
+      "align_method": "canon",
+      "requirement_kind": "bool",
+      "requirement_quote": "Болюс Нет",
+      "sku_characteristic": "Да [catalog.xlsx; Товары!H14]"
+    },
+    {
+      "requirement_id": "d6df49d99f33",
+      "position_id": "0319200068624000142:2:2-насос-инфузионный-эластомерный-10-штука",
+      "name": "Объем заполнения",
+      "sku_id": "CT0050L",
+      "status": "mismatch",
+      "reason": "point_outside_range",
+      "align_method": "canon",
+      "requirement_kind": "range",
+      "requirement_quote": "Объем заполнения ≥ 250 и ≤ 299 Кубический сантиметр;^миллилитр",
+      "sku_characteristic": "2 jours | 240 ml | 250 ml | 300 ml | 5 | CT0050L | 12 [wym_abx_ctx.pdf; PDF с. 10; Gamme Couleur table (printed p8), exact reference row; duration / fill / nominal / maximum / flow / reference / units]"
+    }
+  ],
+  "note_usage": "GPT-Luna reached via Cursor subagent; per-call token/cost not exposed to the harness -> record as unavailable until a code-callable Luna endpoint is wired."
+}

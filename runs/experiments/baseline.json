@@ -1,0 +1,73 @@
+{
+  "requirements": 225,
+  "skus": 4,
+  "tenders_in_scope": 10,
+  "tenders_with_requirements": 10,
+  "requirements_per_tender": {
+    "0119200000124020697": 4,
+    "0128200000125006876": 13,
+    "0308300014226000025": 7,
+    "0319200068624000142": 20,
+    "0321200014126000201": 50,
+    "0337100018826000257": 14,
+    "0356300059125000001": 16,
+    "0372100048826000117": 7,
+    "0373200087824002359": 65,
+    "32514576235": 29
+  },
+  "gap_tenders": [
+    "0119200000124020697",
+    "0319200068624000142",
+    "0373200087824002359"
+  ],
+  "pairs": 900,
+  "pairs_aligned": 493,
+  "pairs_decidable": 391,
+  "status_distribution": {
+    "unknown": 509,
+    "match": 235,
+    "mismatch": 156
+  },
+  "reason_distribution": {
+    "not_aligned": 407,
+    "bool_equal": 142,
+    "missing_sku_value": 63,
+    "bool_conflict": 59,
+    "number_ok": 27,
+    "point_outside_range": 24,
+    "range_not_subset": 24,
+    "value_in_sku_set": 23,
+    "kinds_incompatible": 19,
+    "positive_attribute": 17,
+    "negative_attribute": 14,
+    "set_incomplete": 12,
+    "requirement_unparsed": 11,
+    "value_not_in_sku_set": 10,
+    "bool_text_compatible": 9,
+    "set_covered": 9,
+    "unit_incompatible": 9,
+    "point_inside_range": 8,
+    "text_conflict": 8,
+    "bool_text_conflict": 3,
+    "number_failed": 2
+  },
+  "align_method_distribution": {
+    "canon": 480,
+    "none": 407,
+    "tokens": 13
+  },
+  "requirement_kind_distribution": {
+    "bool": 99,
+    "text": 55,
+    "number": 36,
+    "range": 18,
+    "reference": 11,
+    "set": 6
+  },
+  "model_tokens_by_stage": {
+    "prepare_sku": 0,
+    "prepare_tenders": 0,
+    "matching": 0,
+    "note": "deterministic baseline makes no model calls; this is the zero that H7/H8 must beat"
+  }
+}

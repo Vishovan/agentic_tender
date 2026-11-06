@@ -1,0 +1,22 @@
+{
+  "tender_id": "0119200000124020697",
+  "arm": "gpt-luna + code checker",
+  "baseline_requirements_for_this_tender": 0,
+  "luna_requirements": 4,
+  "positions": 2,
+  "parsed_to_a_checkable_constraint": 4,
+  "requirement_kind_distribution": {
+    "text": 4
+  },
+  "pairs": 16,
+  "pairs_decidable": 0,
+  "status_distribution": {
+    "unknown": 16
+  },
+  "reason_distribution": {
+    "not_aligned": 16
+  },
+  "match_examples": [],
+  "mismatch_examples": [],
+  "note_usage": "GPT-Luna reached via Cursor subagent; per-call token/cost not exposed to the harness -> record as unavailable until a code-callable Luna endpoint is wired."
+}

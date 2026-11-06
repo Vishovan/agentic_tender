@@ -1,0 +1,50 @@
+[
+  {
+    "position_id": "0119200000124020697:1:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "CT0050L",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:1:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:1:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "MC1248L",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:1:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "MS5248M",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:2:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "CT0050L",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:2:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "M275-07",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:2:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "MC1248L",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  },
+  {
+    "position_id": "0119200000124020697:2:насос-инфузионный-эластомерный-32-50-50-190-0000",
+    "sku_id": "MS5248M",
+    "status": "unknown",
+    "reason": "unresolved_requirements"
+  }
+]

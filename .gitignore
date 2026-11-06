@@ -4,7 +4,9 @@ __pycache__/
 .mypy_cache/
 *.pyc
 .env
-runs/
+runs/*
+!runs/luna/
+!runs/experiments/
 .cache/
 .DS_Store
 .idea/

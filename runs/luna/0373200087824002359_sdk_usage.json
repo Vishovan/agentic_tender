@@ -1,0 +1,13 @@
+{
+  "run_id": "run-d288848c-adb8-40ca-9fc6-00443cc87691",
+  "stage": "llm_extract",
+  "model": "gpt-5.6-luna",
+  "input_tokens": 14009,
+  "output_tokens": 3942,
+  "cached_tokens": 0,
+  "reasoning_tokens": 639,
+  "duration_ms": 38608,
+  "cache": "miss",
+  "error": null,
+  "calls": 1
+}

@@ -1,0 +1,785 @@
+[
+  {
+    "requirement_id": "2244c34e5f9a",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Объем резервуара",
+    "raw_text": "не менее 100 мл и не более 150 мл**",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 100.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Объем резервуара не менее 100 мл и не более 150 мл**"
+    }
+  },
+  {
+    "requirement_id": "7c4fbfbf4fcc",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Регулируемая скорость",
+    "raw_text": "0:2,0:4,0:6,0:8,0:10,0:12,0:14,0 мл/ч.*",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "0:2,0:4,0:6,0:8,0:10,0:12,0:14,0 мл/ч.*",
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Регулируемая скорость 0:2,0:4,0:6,0:8,0:10,0:12,0:14,0 мл/ч.*"
+    }
+  },
+  {
+    "requirement_id": "0e6c6b23112f",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Объём болюса",
+    "raw_text": "5 мл.",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "5 мл.",
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Объём болюса 5 мл."
+    }
+  },
+  {
+    "requirement_id": "a3e6857b424f",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Регулируемое время работы замка болюса",
+    "raw_text": "0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\").",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\").",
+      "unit": "min",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Регулируемое время работы замка болюса - 0,10,15,30 мин., с возможностью немедленной остановки (режим \"0\")."
+    }
+  },
+  {
+    "requirement_id": "26fdf4af0da1",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Остаточный объем в линии",
+    "raw_text": "не более 2 мл**",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "lte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Остаточный объем в линии не более 2 мл**"
+    }
+  },
+  {
+    "requirement_id": "a61329d7f471",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие 8-ми вариантов выбора скорости с возможностью немедленной остановки инфузии",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие 8-ми вариантов выбора скорости с возможностью немедленной остановки инфузии (режим \"0\") значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "5a8cd1fda951",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Скорость инфузии должна устанавливаться с помощью извлекаемого ключа управления",
+    "raw_text": "значение не изменяемое*",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое*",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Скорость инфузии должна устанавливаться с помощью извлекаемого ключа управления. значение не изменяемое*"
+    }
+  },
+  {
+    "requirement_id": "549eed0269ef",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие резервуара из эластичного химически инертного медицинского силикона",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие резервуара, состоящего из эластичного химически инертного медицинского силикона, не содержит латекс и фталаты значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "9610ca9b0d71",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие высокопрочного защитного пластикового корпуса",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие высокопрочного защитного пластикового корпуса, выдерживающего в течение 16 мс пикового ударного ускорения 10g. значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "4d5317a70220",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие механизма, контролирующего точность подачи раствора",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие механизма, контролирующего точность подачи раствора, и обеспечивающий гарантию точности инфузии при заполнении резервуара от 50% от объема резервуара значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "29dadc7db227",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие четкой визуальной шкалы деления",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие четкой визуальной шкалы деления с шагом не более 10 мл. значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "b6eee261dbfc",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Защита корпуса от УФ-излучения",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Материал из которого изготовлен корпус должен быть защищен от УФ- излучения от 220 до 360 нм. значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "a835ca72b850",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Порт для заполнения препарата",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Порт для заполнения препарата должен иметь запорный клапан значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "c6429b0e887c",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие двух фильтров грубой очистки",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие в порту заполнения двух фильтров грубой очистки , для защиты инфузионной линии от окклюзии значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "dafe2c9f7e36",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие колпачка со встроенным воздушным фильтром",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие на дистальном конце удлинительной линии колпачка со встроенным воздушным фильтром значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "4d0d0d48d5ef",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие устройства, создающего равное давление",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие устройства, создающего равное давление как в самой помпе, так и в катетере значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "e4f468e05bad",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие второго эластомерного резервуара",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие на инфузионной линии второго эластомерного резервуара значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "c372edb8ea5d",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Режимы работы замка болюса",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Режимы работы замка болюса должны устанавливаться с помощью извлекаемого ключа управления. значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "e59c34183e05",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Кнопка болюса",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Кнопка болюса должна иметь цветовое кодирование значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "9c8958f55c25",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие фиксирующего ремня",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие фиксирующего ремня для крепления болюсного модуля на руку пациента значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "f71d32204c05",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Защита инфузионной линии от перегибов",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Инфузионная линия защищена от перегибов значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "c0a7b7313492",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Инфузионный фильтр удлинительной линии",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Удлинительная линия должна быть снабжена инфузионным фильтром с размером ячеек 1,2 микрона значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "0921a8c8cf20",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие скользящего зажима",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие на инфузионной линии скользящего зажима значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "03b616deab65",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Герметичность соединений",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Герметичность соединений значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "1f0f5302fbde",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наличие клипсы для крепления помпы",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наличие клипсы для крепления помпы на одежде значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "761a1fbd14b0",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Наклейка, бланк",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Наклейка, бланк значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "0d57055d1072",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Упаковка",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Упаковка индивидуальная, стерильная значение не изменяемое *"
+    }
+  },
+  {
+    "requirement_id": "fca77776fa10",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Маркировка",
+    "raw_text": "стерильно, только для одноразового применения, не содержит латекс, не содержит DEHP*",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "стерильно, только для одноразового применения, не содержит латекс, не содержит dehp*",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Маркировка стерильно, только для одноразового применения, не содержит латекс, не содержит DEHP*"
+    }
+  },
+  {
+    "requirement_id": "501603b4734d",
+    "tender_id": "32514576235",
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "position_title": "Микроинфузионная помпа с регулятором скорости потока",
+    "name": "Стерилизация",
+    "raw_text": "значение не изменяемое *",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "значение не изменяемое *",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/03_32514576235/01_Извещение.xml",
+      "locator": "page/?",
+      "quote": "Стерилизация. Окись этилена значение не изменяемое *"
+    }
+  }
+]

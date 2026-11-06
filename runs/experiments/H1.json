@@ -1,0 +1,90 @@
+{
+  "question": "One vector per characteristic (aligned) vs one bag per SKU.",
+  "per_characteristic_matches": 235,
+  "per_sku_bag_matches": 768,
+  "spurious_bag_matches": 533,
+  "examples_spurious_bag_matches": [
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Болюс: Нет",
+      "aligned_characteristic": "Да [catalog.xlsx; Товары!H14]",
+      "aligned_verdict": "mismatch/bool_conflict",
+      "bag_matched_on": "Шкала во время работы помпы внутри защитного корпуса не представляет точного объема силиконового резервуара в мл. и предназначена только для наблюдения пациентом или лицом, ухаживающим за больным, за работой помпы. [Accufuser_instruction_2020.pdf; PDF с. 3; Left column / ИНФОРМАЦИЯ ДЛЯ ПАЦИЕНТОВ, item 3]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "Защита от УФ-лучей: Да",
+      "aligned_characteristic": "— [catalog.xlsx; Товары!K7]",
+      "aligned_verdict": "unknown/missing_sku_value",
+      "bag_matched_on": "Регулируемая [catalog.xlsx; Товары!E7]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "requirement": "Защита от УФ-лучей: Да",
+      "aligned_characteristic": "— [catalog.xlsx; Товары!K16]",
+      "aligned_verdict": "unknown/missing_sku_value",
+      "bag_matched_on": "Регулируемая [catalog.xlsx; Товары!E16]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "requirement": "Номинальный объем заполнения: ≥ 300 и ≤ 399",
+      "aligned_characteristic": "Следить, чтобы при заполнении помпы объем лекарственного средства был не менее минимального объема (50 %), указанного в таблице «Время инфузии». Не превышать максимальный объем заполнения резервуара (110 %). [Accufuser_instruction_2020.pdf; PDF с. 5; Flow factors table, Объем заполнения, recommendations column]",
+      "aligned_verdict": "mismatch/range_not_subset",
+      "bag_matched_on": "300 [catalog.xlsx; Товары!C16]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "aligned_characteristic": null,
+      "aligned_verdict": "unknown/not_aligned",
+      "bag_matched_on": "Постоянная [catalog.xlsx; Товары!E12]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "aligned_characteristic": null,
+      "aligned_verdict": "unknown/not_aligned",
+      "bag_matched_on": "Нет [catalog.xlsx; Товары!H7]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MC1248L",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "aligned_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]",
+      "aligned_verdict": "mismatch/bool_conflict",
+      "bag_matched_on": "C: Только непрерывная инфузия/Continuous [Accufuser_instruction_2020.pdf; PDF с. 4; Coding tables for M4C and M16C]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "MS5248M",
+      "requirement": "Регулирование скорости инфузии: нет",
+      "aligned_characteristic": "Постоянную (базальную) скорость инфузии можно настроить вращая регулятор по стрелке до ее выравнивания с указателем необходимой скорости инфузии с помощью поставляемого с медицинским изделием извлекаемого ключа управления. Ключ необходимо снять в целях безопасности. [Accufuser_instruction_2020.pdf; PDF с. 3; Right column / Установка нужной скорости инфузии]",
+      "aligned_verdict": "mismatch/bool_conflict",
+      "bag_matched_on": "Шкала во время работы помпы внутри защитного корпуса не представляет точного объема силиконового резервуара в мл. и предназначена только для наблюдения пациентом или лицом, ухаживающим за больным, за работой помпы. [Accufuser_instruction_2020.pdf; PDF с. 3; Left column / ИНФОРМАЦИЯ ДЛЯ ПАЦИЕНТОВ, item 3]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "CT0050L",
+      "requirement": "Путь введения лекарственного препарата: Внутривенный, Подкожный, Эпидуральный",
+      "aligned_characteristic": null,
+      "aligned_verdict": "unknown/not_aligned",
+      "bag_matched_on": "Coque anti-UV graduée : polycarbonate rigide [wym_abx_ctx.pdf; PDF с. 4; III characteristics, item 2]"
+    },
+    {
+      "tender_id": "0321200014126000201",
+      "sku_id": "M275-07",
+      "requirement": "Путь введения лекарственного препарата: Внутривенный, Подкожный, Эпидуральный",
+      "aligned_characteristic": null,
+      "aligned_verdict": "unknown/not_aligned",
+      "bag_matched_on": "Да [catalog.xlsx; Товары!G7]"
+    }
+  ],
+  "verdict": "keep_per_characteristic",
+  "reading": "A per-SKU bag match (no alignment) fires on 768 pair(s) and 533 of them are wrong characteristic matches the per-characteristic encoding avoids."
+}

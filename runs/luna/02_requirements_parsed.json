@@ -1,0 +1,1779 @@
+[
+  {
+    "requirement_id": "31ac9a58834c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Объем заполнения",
+    "raw_text": ">= 100 <= 124",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 100.0,
+      "high": 124.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Объем заполнения: >= 100 <= 124 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "7a99fc6d62dc",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "290956e1975c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "58a9bcdc518f",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Регулирование скорости инфузии: Да."
+    }
+  },
+  {
+    "requirement_id": "6907337390d6",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "3a42f6d96ba8",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "dd5cc774deb4",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Скорость инфузии",
+    "raw_text": "2; 4; 6;\n8",
+    "mandatory": true,
+    "constraint": {
+      "kind": "set",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [
+        2.0,
+        4.0,
+        6.0,
+        8.0
+      ],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Скорость инфузии, мл/час: 2; 4; 6; 8."
+    }
+  },
+  {
+    "requirement_id": "cedbb656e31c",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Количество режимов скорости потока",
+    "raw_text": ">= 4",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 4.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Количество режимов скорости потока: >= 4 шт."
+    }
+  },
+  {
+    "requirement_id": "da32a18d2236",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "c9a3f7745f2b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Инфузионный фильтр",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "f2342e8578d8",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Шаг регулировки скорости потока",
+    "raw_text": "2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Шаг регулировки скорости потока, мл/ч: 2."
+    }
+  },
+  {
+    "requirement_id": "b1870b866ccf",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:1:позиция-1-объем-заполнения-100-124",
+    "position_title": "Позиция 1, объем заполнения 100-124",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "e469b92c7f26",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Объем заполнения",
+    "raw_text": ">= 100 <= 124",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 100.0,
+      "high": 124.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Объем заполнения: >= 100 <= 124 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "e05dcdc3704d",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "fe44d2f94126",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "42fea6cd380d",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/5",
+      "quote": "Регулирование скорости инфузии: Нет."
+    }
+  },
+  {
+    "requirement_id": "9339e811d088",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "bdeb8aab3c39",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "c3d3633b8b01",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Скорость инфузии",
+    "raw_text": "2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Скорость инфузии, мл/час: 2."
+    }
+  },
+  {
+    "requirement_id": "81adf0f53e78",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "b580d62caf58",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Инфузионный фильтр",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "464934d4552f",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:2:позиция-2-объем-заполнения-100-124",
+    "position_title": "Позиция 2, объем заполнения 100-124",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "ab99fcad732b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Объем заполнения",
+    "raw_text": ">= 250 <= 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Объем заполнения: >= 250 <= 299 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "b111b3a88a64",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "2f77dfc2b471",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "cdd356928437",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Регулирование скорости инфузии: Нет."
+    }
+  },
+  {
+    "requirement_id": "bae4a614c638",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "c5fc74b210f2",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "23648fd69e99",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Скорость инфузии",
+    "raw_text": "5",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 5.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Скорость инфузии, мл/час: 5."
+    }
+  },
+  {
+    "requirement_id": "072a910b79c4",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "ab7b1fed5bde",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Инфузионный фильтр",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "e4a69557b187",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:3:позиция-3-объем-заполнения-250-299",
+    "position_title": "Позиция 3, объем заполнения 250-299",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/6",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "fc58bfe8e0f2",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Объем заполнения",
+    "raw_text": ">= 250 <= 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Объем заполнения: >= 250 <= 299 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "f64e18a8fc70",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "f647264d33bd",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "7eb715498f08",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Регулирование скорости инфузии: Да."
+    }
+  },
+  {
+    "requirement_id": "bd60050455c3",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "c953ceee1785",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "f371784b14fa",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Скорость инфузии",
+    "raw_text": "2; 4; 6;\n8",
+    "mandatory": true,
+    "constraint": {
+      "kind": "set",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [
+        2.0,
+        4.0,
+        6.0,
+        8.0
+      ],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Скорость инфузии, мл/час: 2; 4; 6; 8."
+    }
+  },
+  {
+    "requirement_id": "108d29b35534",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Количество режимов скорости потока",
+    "raw_text": ">= 4",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 4.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Количество режимов скорости потока: >= 4 шт."
+    }
+  },
+  {
+    "requirement_id": "9c533d2cd5d4",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "fb0f3ee3cdbc",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Инфузионный фильтр",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "119988869084",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Шаг регулировки скорости потока",
+    "raw_text": "2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Шаг регулировки скорости потока, мл/ч: 2."
+    }
+  },
+  {
+    "requirement_id": "05303f3cae03",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:4:позиция-4-объем-заполнения-250-299",
+    "position_title": "Позиция 4, объем заполнения 250-299",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "22234fbf9f87",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Объем заполнения",
+    "raw_text": ">= 250 <= 299",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 250.0,
+      "high": 299.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/7",
+      "quote": "Объем заполнения: >= 250 <= 299 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "25135b165e97",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "244d7a5faf62",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "2d5f1dc35cdf",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Регулирование скорости инфузии: Нет."
+    }
+  },
+  {
+    "requirement_id": "ed369cd2e4ce",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "0b3e4e539044",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "1413ae26ae99",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Скорость инфузии",
+    "raw_text": "5",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 5.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Скорость инфузии, мл/час: 5."
+    }
+  },
+  {
+    "requirement_id": "64006279bd1f",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "fb946d32fbe9",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Инфузионный фильтр",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "ef55b93fb576",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:5:позиция-5-объем-заполнения-250-299",
+    "position_title": "Позиция 5, объем заполнения 250-299",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  },
+  {
+    "requirement_id": "6927b2531c83",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Объем заполнения",
+    "raw_text": ">= 400 <= 499",
+    "mandatory": true,
+    "constraint": {
+      "kind": "range",
+      "operator": null,
+      "value": null,
+      "low": 400.0,
+      "high": 499.0,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "ml",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Объем заполнения: >= 400 <= 499 см[3*];^мл."
+    }
+  },
+  {
+    "requirement_id": "3ce6242f9418",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Болюс",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Болюс: Нет."
+    }
+  },
+  {
+    "requirement_id": "b11fe23e2d02",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Защита от УФ-лучей",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Защита от УФ-лучей: Да."
+    }
+  },
+  {
+    "requirement_id": "45a7881142cc",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Регулирование скорости инфузии",
+    "raw_text": "Да",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 1,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "да",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Регулирование скорости инфузии: Да."
+    }
+  },
+  {
+    "requirement_id": "15b018b870f4",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Система блокировки болюса",
+    "raw_text": "Нет",
+    "mandatory": true,
+    "constraint": {
+      "kind": "bool",
+      "operator": null,
+      "value": 0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "нет",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Система блокировки болюса: Нет."
+    }
+  },
+  {
+    "requirement_id": "70a19e9786fa",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Путь введения лекарственного препарата",
+    "raw_text": "Эпидуральный;\nВнутривенный",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "эпидуральный; внутривенный",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Путь введения лекарственного препарата: Эпидуральный; Внутривенный."
+    }
+  },
+  {
+    "requirement_id": "ccebdea1be3b",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Скорость инфузии",
+    "raw_text": "12; 2;\n13; 3; 14; 4; 5; 6; 7; 8; 10",
+    "mandatory": true,
+    "constraint": {
+      "kind": "set",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [
+        12.0,
+        2.0,
+        13.0,
+        3.0,
+        14.0,
+        4.0,
+        5.0,
+        6.0,
+        7.0,
+        8.0,
+        10.0
+      ],
+      "text": null,
+      "unit": "ml/h",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Скорость инфузии, мл/час: 12; 2; 13; 3; 14; 4; 5; 6; 7; 8; 10."
+    }
+  },
+  {
+    "requirement_id": "ac2b0c23d07e",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Количество режимов скорости потока",
+    "raw_text": ">= 4",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 4.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Количество режимов скорости потока: >= 4 шт."
+    }
+  },
+  {
+    "requirement_id": "b434bd694a88",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Количество фильтров",
+    "raw_text": ">= 2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "gte",
+      "value": 2.0,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Количество фильтров: >= 2 шт."
+    }
+  },
+  {
+    "requirement_id": "fa5113ed33ab",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Инфузионный фильтр",
+    "raw_text": "1.2",
+    "mandatory": true,
+    "constraint": {
+      "kind": "number",
+      "operator": "eq",
+      "value": 1.2,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": null,
+      "unit": "um",
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/8",
+      "quote": "Инфузионный фильтр, мкм: 1.2."
+    }
+  },
+  {
+    "requirement_id": "564fbbadb272",
+    "tender_id": "0373200087824002359",
+    "position_id": "0373200087824002359:6:позиция-6-объем-заполнения-400-499",
+    "position_title": "Позиция 6, объем заполнения 400-499",
+    "name": "Конструктивные особенности",
+    "raw_text": "Штырьковый коннектор Luer/Luer\nLock",
+    "mandatory": true,
+    "constraint": {
+      "kind": "text",
+      "operator": null,
+      "value": null,
+      "low": null,
+      "high": null,
+      "low_inclusive": true,
+      "high_inclusive": true,
+      "values": [],
+      "text": "штырьковый коннектор luer/luer lock",
+      "unit": null,
+      "knowledge": "stated"
+    },
+    "span": {
+      "file": "tenders/02_0373200087824002359/05_Техническое_задание_16568494-1.pdf",
+      "locator": "page/9",
+      "quote": "Конструктивные особенности: Штырьковый коннектор Luer/Luer Lock."
+    }
+  }
+]

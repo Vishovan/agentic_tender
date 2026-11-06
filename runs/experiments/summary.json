@@ -1,0 +1,20 @@
+{
+  "dataset": "dataset_zakupki",
+  "requirements": 225,
+  "skus": 4,
+  "tenders_with_requirements": 10,
+  "tenders_in_scope": 10,
+  "tested": {
+    "H1": "keep_per_characteristic",
+    "H2": "keep_hybrid_rrf",
+    "H3": "keep_hybrid",
+    "H6": "reject_reranker",
+    "H9": "gate_ocr_per_file",
+    "H10": "keep_normalization"
+  },
+  "blocked": {
+    "H5": "GPT-Luna arm now wired (Cursor SDK); compare full-doc vs top-k chunk input tokens on 02/03 where the source is large (03 cost 42.8k input tokens on the full doc).",
+    "H7": "Gold slice reviewed; needs live CURSOR_API_KEY to score GPT-Luna verdicts vs check_constraints.",
+    "H8": "Gold slice reviewed; needs live CURSOR_API_KEY to run GPT-Luna on unknown pairs only."
+  }
+}

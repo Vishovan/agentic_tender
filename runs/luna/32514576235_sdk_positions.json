@@ -1,0 +1,26 @@
+[
+  {
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "sku_id": "CT0050L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "sku_id": "M275-07",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "sku_id": "MC1248L",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  },
+  {
+    "position_id": "32514576235:1:микроинфузионная-помпа-с-регулятором-скорости-по",
+    "sku_id": "MS5248M",
+    "status": "mismatch",
+    "reason": "mandatory_conflict"
+  }
+]

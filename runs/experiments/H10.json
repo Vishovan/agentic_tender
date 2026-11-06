@@ -1,0 +1,27 @@
+{
+  "question": "Full checker vs checker with unit normalization / negation handling disabled.",
+  "unit_normalization": {
+    "unit_incompatible_pairs_guarded": 9,
+    "status_flips_when_units_stripped": 1,
+    "status_flips_among_guarded": 1,
+    "false_matches_injected": 0,
+    "effect_on_this_corpus": "guard_only",
+    "examples": [
+      {
+        "tender_id": "0128200000125006876",
+        "sku_id": "CT0050L",
+        "requirement": "Размер пор встроенного инфузионного фильтра, мл: 0.0012 | 0.005",
+        "sku_characteristic": "Filtre éliminateur d’air à 1.2 µ et anti-particules : polyethersulfone [wym_abx_ctx.pdf; PDF с. 4; III characteristics, item 6]",
+        "full": "unknown/unit_incompatible",
+        "without_normalization": "mismatch/point_outside_range"
+      }
+    ]
+  },
+  "negation_handling": {
+    "verdicts_depending_on_negation_or_bool": 84,
+    "corroborated_by": "H3.false_matches_negation",
+    "effect_on_this_corpus": "load_bearing"
+  },
+  "verdict": "keep_normalization",
+  "reading": "Unit normalization guards 9 cross-unit pair(s); stripping it flips 1 status and injects 0 false match(es) on this corpus, so it is a correctness guard here rather than a decisive lever. Negation/bool handling carries 84 verdict(s) (the same cases H3 counts), so it is load-bearing."
+}
